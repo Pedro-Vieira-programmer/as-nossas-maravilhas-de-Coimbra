@@ -1,0 +1,158 @@
+╔═══════════════════════════════════════════════════════════════════════════╗
+║              ✅ ALTERAÇÕES v2.1 - POSIÇÕES E TAMANHOS AJUSTADOS          ║
+╚═══════════════════════════════════════════════════════════════════════════╝
+
+📋 SUMÁRIO DAS ALTERAÇÕES:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+✅ 1. MAPA (image1.png) - Posição Ajustada
+   Antes: top: 1rem; right: 1rem; (140x130px)
+   Depois: top: 0; right: 0; (140x140px)
+   
+   → Agora ao mesmo nível do hexágono no topo
+
+✅ 2. UNIVERSIDADE (university.png) - Redimensionada e Reposicionada
+   Antes: 160x140px @ bottom: 16rem;
+   Depois: 200x180px @ bottom: 10rem; right: 0;
+   
+   → Imagem MAIOR, encostada à direita, entre texto e cinzento
+
+✅ 3. RECTÂNGULO CINZENTO - Bordas Arredondadas Restauradas
+   Antes: Sem border-radius
+   Depois: border-radius: 3rem 3rem 0 0;
+   
+   → Cantos arredondados no topo, exatamente como design original
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🎨 LAYOUT FINAL (Mobile - 375px):
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+┌──────────────────────────────────────┐
+│ [HEXÁGONO]         [MAPA: 140x140]   │  ← Alinhados no topo
+│ (Topo Esq.)        (Topo Dir.)       │
+│                                      │
+│  AS NOSSAS         ┌──────────────┐  │
+│  MARAVI-          │              │  │
+│  LHAS DE           │ UNIVERSIDADE │  │  ← 200x180px
+│  COIMBRA           │  (Maior)     │  │     Lado direito
+│                    └──────────────┘  │
+│                                      │
+│  ┌───────────────────────────────┐   │
+│  │                               │   │  ← Bordas arredondadas
+│  │                               │   │     no topo
+│  │      [Botão Iniciar ↑]       │   │
+│  │                               │   │
+│  └───────────────────────────────┘   │
+└──────────────────────────────────────┘
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+📊 RESUMO DE MUDANÇAS:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Propriedade          │ Elemento      │ Antes           │ Depois
+───────────────────┼──────────────┼─────────────────┼──────────────────
+.map-wrapper:       │              │                 │
+  position          │ image1       │ top:1rem        │ top:0
+  width x height    │              │ 130x130px       │ 140x140px
+───────────────────┼──────────────┼─────────────────┼──────────────────
+.university-wrapper │              │                 │
+  position          │ university   │ bottom:16rem    │ bottom:10rem
+  width x height    │              │ 160x140px       │ 200x180px
+  right             │              │ right:0.5rem    │ right:0
+───────────────────┼──────────────┼─────────────────┼──────────────────
+.gray-section       │              │                 │
+  border-radius     │ rectângulo   │ Nenhum          │ 3rem 3rem 0 0
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+✅ ESPECIFICAÇÕES MANTIDAS:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+✓ Cores exatamente iguais
+✓ Ícones exatamente iguais
+✓ Tamanhos, posições, margens mantidas
+✓ Espaçamentos preservados
+✓ Design original respeitado
+✓ Responsividade mantida
+
+🆕 ADIÇÕES/CORREÇÕES:
+✓ Image1 ao mesmo nível do hexágono
+✓ University maior e melhor posicionada
+✓ Rectângulo com bordas arredondadas (como original)
+✓ Layout conforme result.png
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🔧 BREAKPOINTS ATUALIZADOS:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Mobile (<360px):
+  • Map: 115x115px
+  • University: 170x150px
+
+Mobile (360-480px):
+  • Map: 140x140px
+  • University: 200x180px
+
+Tablet (481-768px):
+  • Map: 150x150px
+  • University: 220x200px
+
+Desktop (769px+):
+  • Map: 160x160px
+  • University: 240x220px
+
+Landscape:
+  • Map: 110x110px
+  • University: 160x140px
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+📄 FICHEIRO MODIFICADO:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+style.css
+  ✏️ Ajustado: .map-wrapper
+  ✏️ Ajustado: .university-wrapper
+  ✏️ Adicionado: border-radius ao .gray-section
+  ✏️ Atualizado: Todos os media queries
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🧪 COMO VERIFICAR:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1. Mapa e Hexágono no topo:
+   ☑ Ambos alinhados horizontalmente?
+   ☑ Image1 ao mesmo nível?
+
+2. Universidade posicionada:
+   ☑ Imagem maior (200x180px)?
+   ☑ Lado direito, encostada?
+   ☑ Entre texto e cinzento?
+
+3. Rectângulo cinzento:
+   ☑ Com cantos arredondados no topo?
+   ☑ Sem cantos na base?
+
+4. Design conforme original:
+   ☑ Layout como em result.png?
+   ☑ Proporções mantidas?
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+📄 DOCUMENTAÇÃO:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Veja ADJUSTMENTS_V2.1.md para detalhes completos
+
+╔═══════════════════════════════════════════════════════════════════════════╗
+║                 ✅ VERSÃO 2.1 PRONTO PARA USAR! 🚀                       ║
+║           Posições e tamanhos ajustados conforme design original          ║
+╚═══════════════════════════════════════════════════════════════════════════╝
+
+Status: ✅ CONCLUÍDO
+Data: 2026-05-10
+Versão: 2.1 (Ajuste de Posições e Tamanhos)

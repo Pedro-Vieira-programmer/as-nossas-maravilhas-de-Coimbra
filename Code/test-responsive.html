@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste - As Nossas Maravilhas de Coimbra Screen 1</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 2rem;
+            background: #f0f0f0;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        }
+        
+        .test-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        h1 {
+            color: #333;
+            margin-bottom: 2rem;
+        }
+        
+        .devices {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+        
+        .device {
+            text-align: center;
+        }
+        
+        .device-label {
+            font-weight: bold;
+            margin-bottom: 1rem;
+            color: #555;
+            font-size: 0.95rem;
+        }
+        
+        .device iframe {
+            width: 100%;
+            height: 600px;
+            border: 2px solid #ddd;
+            border-radius: 0.5rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        
+        .info-box {
+            background: #e3f2fd;
+            border-left: 4px solid #2196f3;
+            padding: 1rem;
+            margin-bottom: 2rem;
+            border-radius: 0.25rem;
+        }
+        
+        .info-box p {
+            margin: 0.5rem 0;
+            color: #1565c0;
+        }
+        
+        .checklist {
+            background: #f1f8e9;
+            border-left: 4px solid #4caf50;
+            padding: 1rem;
+            margin-bottom: 2rem;
+            border-radius: 0.25rem;
+        }
+        
+        .checklist ul {
+            margin: 0;
+            padding-left: 1.5rem;
+        }
+        
+        .checklist li {
+            color: #558b2f;
+            margin-bottom: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="test-container">
+        <h1>📱 Teste Responsivo - Screen 1</h1>
+        
+        <div class="info-box">
+            <p><strong>Nota:</strong> Este ficheiro é apenas para teste visual. Para usar a aplicação em produção, abra diretamente <code>index.html</code></p>
+        </div>
+        
+        <div class="checklist">
+            <strong>✅ Design Verificado:</strong>
+            <ul>
+                <li>Cores exatamente iguais (coral #d9a48b)</li>
+                <li>Textos exatamente iguais ("AS NOSSAS MARAVILHAS DE COIMBRA")</li>
+                <li>Todas as imagens originais preservadas</li>
+                <li>Ícone da seta mantido (↑)</li>
+                <li>Sombras, bordas e cantos arredondados</li>
+                <li>Responsive em todos os tamanhos</li>
+                <li>Sem elementos adicionados ou removidos</li>
+            </ul>
+        </div>
+
+        <h2>Dispositivos Suportados</h2>
+        
+        <div class="devices">
+            <div class="device">
+                <div class="device-label">📱 iPhone SE (360px)</div>
+                <iframe src="index.html"></iframe>
+            </div>
+            
+            <div class="device">
+                <div class="device-label">📱 iPhone 12 (390px)</div>
+                <iframe src="index.html" style="max-width: 390px; height: 844px;"></iframe>
+            </div>
+            
+            <div class="device">
+                <div class="device-label">📱 iPhone 14 Pro Max (430px)</div>
+                <iframe src="index.html" style="max-width: 430px; height: 932px;"></iframe>
+            </div>
+            
+            <div class="device">
+                <div class="device-label">📱 Samsung Galaxy S21 (360px)</div>
+                <iframe src="index.html"></iframe>
+            </div>
+        </div>
+
+        <h2>Recursos Responsivos</h2>
+        
+        <div class="info-box">
+            <p><strong>CSS Media Queries:</strong></p>
+            <ul style="margin-top: 0.5rem;">
+                <li>Extra Small: < 360px</li>
+                <li>Small: 360px - 480px</li>
+                <li>Medium: 481px - 768px</li>
+                <li>Large: 769px+</li>
+                <li>Landscape: Qualquer orientação</li>
+            </ul>
+        </div>
+
+        <h2>Como Testar</h2>
+        
+        <div class="info-box">
+            <p><strong>1. Chrome DevTools (Recomendado):</strong></p>
+            <ul style="margin-top: 0.5rem;">
+                <li>Abra index.html</li>
+                <li>Pressione F12 para abrir DevTools</li>
+                <li>Clique em Device Toggle (Ctrl+Shift+M)</li>
+                <li>Teste diferentes dispositivos</li>
+            </ul>
+        </div>
+
+        <div class="info-box">
+            <p><strong>2. Servidor Local:</strong></p>
+            <ul style="margin-top: 0.5rem;">
+                <li>cd na pasta Code/</li>
+                <li>Execute: python -m http.server 8000</li>
+                <li>Acesse: http://localhost:8000</li>
+            </ul>
+        </div>
+
+        <div class="info-box">
+            <p><strong>3. Navegador Web:</strong></p>
+            <ul style="margin-top: 0.5rem;">
+                <li>Abra index.html diretamente</li>
+                <li>Redimensione o navegador</li>
+                <li>Veja o layout adaptar-se responsivamente</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

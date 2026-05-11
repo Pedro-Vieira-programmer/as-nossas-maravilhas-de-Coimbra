@@ -1,0 +1,338 @@
+/* ============================================
+   AS NOSSAS MARAVILHAS DE COIMBRA - MOBILE APP
+   Mobile-First Design
+   ============================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+}
+
+/* Main app screen - Mobile viewport */
+.app-screen {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background-color: #ffffff;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ====== HEXAGON DECORATION (Top-Left) ====== */
+.hexagon-shape {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 110px;
+    height: 120px;
+    z-index: 20;
+    overflow: visible;
+}
+
+.hexagon-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* ====== MAP WRAPPER (Top-Right - Same level as hexagon, much larger) ====== */
+.map-wrapper {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 200px;
+    height: 200px;
+    z-index: 19;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem;
+}
+
+.map-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+/* ====== TITLE TEXT (Main Heading) ====== */
+.title-wrapper {
+    position: absolute;
+    top: 9rem;
+    left: 1.5rem;
+    right: 3rem;
+    z-index: 18;
+    width: auto;
+}
+
+.title-text {
+    font-size: 3rem;
+    font-weight: 900;
+    line-height: 1;
+    color: #1a1a1a;
+    letter-spacing: -0.03em;
+    word-break: break-word;
+    text-transform: uppercase;
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif;
+}
+
+/* ====== UNIVERSITY/CHURCH ILLUSTRATION (Much larger, fully right-aligned, like result.png) ====== */
+.university-wrapper {
+    position: absolute;
+    top: 25%;
+    right: -20px;
+    width: 300px;
+    height: 280px;
+    z-index: 17;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.university-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+/* ====== GRAY SECTION WITH BUTTON (With rounded corners like original) ====== */
+.gray-section {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 50%;
+    z-index: 10;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding-bottom: 2.5rem;
+    border-radius: 3rem 3rem 0 0;
+}
+
+.gray-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    border-radius: 3rem 3rem 0 0;
+}
+
+/* ====== INICIAR BUTTON ====== */
+.iniciar-btn {
+    position: relative;
+    z-index: 16;
+    background-color: #d9a48b;
+    color: #1a1a1a;
+    border: none;
+    padding: 1rem 2.8rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 1.2rem;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.6rem;
+    box-shadow: 0 4px 16px rgba(217, 164, 139, 0.35);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    letter-spacing: 0.3px;
+    font-family: inherit;
+    white-space: nowrap;
+}
+
+.iniciar-btn:hover {
+    background-color: #d19478;
+    box-shadow: 0 8px 24px rgba(217, 164, 139, 0.45);
+    transform: translateY(-3px);
+}
+
+.iniciar-btn:active {
+    transform: translateY(-1px);
+    box-shadow: 0 2px 8px rgba(217, 164, 139, 0.3);
+}
+
+.btn-text {
+    display: inline;
+    text-transform: capitalize;
+}
+
+.btn-arrow {
+    display: inline-block;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+/* ====== TABLET ADJUSTMENTS (481px+) ====== */
+@media (min-width: 481px) {
+    .title-text {
+        font-size: 2.8rem;
+    }
+
+    .hexagon-shape {
+        width: 115px;
+        height: 125px;
+    }
+
+    .map-wrapper {
+        width: 220px;
+        height: 220px;
+    }
+
+    .university-wrapper {
+        width: 330px;
+        height: 310px;
+        right: -30px;
+    }
+}
+
+/* ====== DESKTOP ADJUSTMENTS (769px+) ====== */
+@media (min-width: 769px) {
+    .title-text {
+        font-size: 3.2rem;
+    }
+
+    .hexagon-shape {
+        width: 120px;
+        height: 130px;
+    }
+
+    .map-wrapper {
+        width: 240px;
+        height: 240px;
+    }
+
+    .university-wrapper {
+        width: 360px;
+        height: 340px;
+        right: -40px;
+    }
+
+    .iniciar-btn {
+        padding: 1.1rem 3rem;
+        font-size: 1.05rem;
+    }
+}
+
+/* ====== LANDSCAPE ORIENTATION ====== */
+@media (orientation: landscape) {
+    .app-screen {
+        height: auto;
+        min-height: 100vh;
+    }
+
+    .title-text {
+        font-size: 2rem;
+        top: 1rem;
+    }
+
+    .title-wrapper {
+        top: 2rem;
+    }
+
+    .hexagon-shape {
+        width: 80px;
+        height: 90px;
+    }
+
+    .map-wrapper {
+        width: 150px;
+        height: 150px;
+        top: 0;
+        right: 0;
+    }
+
+    .university-wrapper {
+        width: 280px;
+        height: 260px;
+        top: 20%;
+        right: -20px;
+    }
+
+    .gray-section {
+        height: 35%;
+        padding-bottom: 2rem;
+    }
+
+    .iniciar-btn {
+        padding: 0.8rem 2.2rem;
+        font-size: 0.95rem;
+    }
+}
+
+/* ====== SMALL MOBILE PHONES (<360px) ====== */
+@media (max-width: 359px) {
+    .title-text {
+        font-size: 2.2rem;
+        top: 8.5rem;
+    }
+
+    .hexagon-shape {
+        width: 95px;
+        height: 105px;
+    }
+
+    .map-wrapper {
+        width: 160px;
+        height: 160px;
+        top: 0;
+        right: 0;
+        padding: 0.5rem;
+    }
+
+    .university-wrapper {
+        width: 260px;
+        height: 240px;
+        top: 25%;
+        right: -15px;
+    }
+
+    .iniciar-btn {
+        padding: 0.85rem 2.2rem;
+        font-size: 0.95rem;
+    }
+
+    .gray-section {
+        padding-bottom: 2rem;
+    }
+}
+
+/* ====== PRINT STYLES ====== */
+@media print {
+    body {
+        background-color: white;
+    }
+
+    .app-screen {
+        box-shadow: none;
+    }
+}
+

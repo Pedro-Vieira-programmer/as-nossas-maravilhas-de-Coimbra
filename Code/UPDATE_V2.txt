@@ -1,0 +1,164 @@
+╔═══════════════════════════════════════════════════════════════════════════╗
+║               ✅ ALTERAÇÕES CONCLUÍDAS - VERSÃO 2.0                      ║
+║            Screen 1 Refatorado para Mobile-First (100% Viewport)         ║
+╚═══════════════════════════════════════════════════════════════════════════╝
+
+📋 RESUMO DAS ALTERAÇÕES:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+✅ 1. REMOVIDA MOLDURA DE TELEFONE
+   Antes: .screen-container com max-width: 375px + border-radius 2.5rem
+   Depois: .app-screen com 100vw x 100vh (viewport completo)
+   
+   Benefício: App agora ocupa TODA a tela do dispositivo
+
+✅ 2. SUBSTITUIÇÃO DE IMAGEM
+   ❌ Removida: result.png (Torre isolada)
+   ✅ Adicionada: university.png (Universidade de Coimbra)
+   📍 Posição: bottom: 16rem, right: 0.5rem (sobre área cinzenta)
+
+✅ 3. AJUSTE DE TIPOGRAFIA
+   📝 Font: Mantida em sistema (sans-serif robusta)
+   📏 Tamanho: Aumentado para 3rem (antes 2.8rem)
+   📍 Posição: Movida para top: 9rem (antes 11rem)
+   
+   Resultado: Texto parcialmente sobre retângulo cinzento ✓
+
+✅ 4. REFATORAÇÃO COMPLETA CSS
+   • Novo estilo para .app-screen (full viewport)
+   • Removido estilos de frame/moldura
+   • Mantidos breakpoints responsivos
+   • Removed: background gradient → white puro
+   • Removed: box-shadow decorativo
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+📁 FICHEIROS ALTERADOS:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+✏️ index.html
+  • Mudado: class="screen-container" → class="app-screen"
+  • Removido: tower-wrapper com result.png
+  • Adicionado: university-wrapper com university.png
+
+✏️ style.css
+  • Refatorado: Todo o CSS para mobile-first
+  • Novo: Estilos para .app-screen (100vw x 100vh)
+  • Removido: Estilos de frame/moldura
+  • Adicionado: Estilos para .university-wrapper
+  • Ajustado: Posicionamento de .title-text
+
+📄 CHANGES.md (Novo)
+  • Documentação detalhada das alterações
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🎯 RESULTADO FINAL:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+ANTES (v1.0):
+  └─ App tinha moldura (max-width: 375px)
+  └─ Usada em visualização no browser
+  └─ result.png (torre isolada)
+  └─ Texto acima do retângulo cinzento
+
+DEPOIS (v2.0):
+  ✅ App ocupa 100% do viewport
+  ✅ Pronta para uso DIRETO no telemóvel
+  ✅ university.png (Universidade de Coimbra)
+  ✅ Texto PARCIALMENTE sobre retângulo cinzento
+  ✅ Sem moldura decorativa
+  ✅ Mantém responsividade em todos os tamanhos
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+📱 COMO USAR:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+OPÇÃO 1: No Telemóvel (RECOMENDADO)
+  1. Copie o ficheiro index.html para o telemóvel
+  2. Abra direto no navegador
+  3. Ocupa a tela toda, sem moldura ✓
+
+OPÇÃO 2: No Browser Desktop (Teste)
+  1. Abra index.html
+  2. Pressione F12 (DevTools)
+  3. Ctrl+Shift+M (Device Toggle)
+  4. Escolha um dispositivo mobile
+  5. Veja como fica no telemóvel
+
+OPÇÃO 3: Servidor Local
+  1. cd Code
+  2. python -m http.server 8000
+  3. Acesse http://localhost:8000
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+✨ CARACTERÍSTICAS MANTIDAS:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+✅ Cores exatamente iguais
+✅ Textos exatamente iguais
+✅ Hexágono decorativo (coral)
+✅ Mapa de Coimbra (top-right)
+✅ Botão "Iniciar" funcional
+✅ Responsividade em todos os tamanhos
+✅ Sombras e estilos visuais
+✅ Sem dependências externas
+
+🆕 ADIÇÕES/MUDANÇAS:
+✅ university.png (em vez de result.png)
+✅ Texto sobre área cinzenta
+✅ Viewport completo (sem moldura)
+✅ Pronto para uso direto no telemóvel
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🧪 VERIFICAÇÃO:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Antes de usar, confirme:
+
+☑ Sem moldura/frame visível dentro da app?
+☑ Texto em tamanho 3rem?
+☑ Universidade posicionada no lado direito?
+☑ Botão visível e funcional?
+☑ Responsivo em diferentes tamanhos?
+☑ Sem scroll horizontal?
+☑ Ocupa 100% da altura?
+
+Se tudo OK → ✅ PRONTO PARA USAR!
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+📊 COMPARAÇÃO ANTES/DEPOIS:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Aspecto             │ Versão 1.0         │ Versão 2.0 ✅
+────────────────────┼────────────────────┼──────────────────
+Tamanho             │ 375px max-width    │ 100vw x 100vh
+Frame               │ Sim (moldura)      │ Não (viewport)
+Uso                 │ Browser viz.       │ Telemóvel direto
+Imagem              │ result.png         │ university.png
+Texto               │ Acima cinzento     │ Sobre cinzento
+Responsividade      │ Sim                │ Sim ✓
+Background Body     │ Gradient           │ Branco puro
+Shadowbox           │ Sim                │ Não
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+📄 DOCUMENTAÇÃO:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Veja CHANGES.md para detalhes técnicos completos das alterações
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+╔═══════════════════════════════════════════════════════════════════════════╗
+║                  ✅ VERSÃO 2.0 PRONTO PARA USAR! 🚀                      ║
+║             App Mobile-First sem moldura, 100% viewport                  ║
+╚═══════════════════════════════════════════════════════════════════════════╝
+
+Status: ✅ COMPLETO
+Data: 2026-05-10
+Versão: 2.0 (Mobile-First Refactor)

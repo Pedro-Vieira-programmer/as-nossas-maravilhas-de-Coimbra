@@ -1,0 +1,168 @@
+╔═══════════════════════════════════════════════════════════════════════════╗
+║              ✅ VERSÃO 2.2 - IMAGENS AUMENTADAS COM SUCESSO!             ║
+╚═══════════════════════════════════════════════════════════════════════════╝
+
+📊 RESUMO DAS ALTERAÇÕES:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+✅ 1. MAPA (image1.png) - SIGNIFICATIVAMENTE MAIOR
+   Antes: 140×140px
+   Depois: 200×200px (mobile) → 240×240px (desktop)
+   
+   → +43% em mobile, +71% em desktop!
+   → Altura similar ao polígono (120px)
+   → Bem mais visível e proporcionado
+
+✅ 2. UNIVERSIDADE (university.png) - DRAMATICAMENTE AUMENTADA
+   Antes: 200×180px @ bottom: 10rem;
+   Depois: 300×280px (mobile) → 360×340px (desktop)
+   
+   → +50% em mobile, +80% em desktop!
+   → Posição: top: 25%; right: -20px; (colada à direita)
+   → Tamanho similar a result.png
+   → Imagem dominante, bem visível
+
+✅ 3. TODOS OS BREAKPOINTS ATUALIZADOS
+   ✓ Mobile pequeno (<360px)
+   ✓ Mobile padrão (360-480px)
+   ✓ Tablet (481-768px)
+   ✓ Desktop (769px+)
+   ✓ Landscape (qualquer orientação)
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+📐 TAMANHOS FINAIS:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+MOBILE (<360px):
+  Map: 160×160px
+  University: 260×240px @ top: 25%; right: -15px;
+
+MOBILE (360-480px) - DEFAULT:
+  Map: 200×200px
+  University: 300×280px @ top: 25%; right: -20px;
+
+TABLET (481-768px):
+  Map: 220×220px
+  University: 330×310px @ top: 25%; right: -30px;
+
+DESKTOP (769px+):
+  Map: 240×240px
+  University: 360×340px @ top: 25%; right: -40px;
+
+LANDSCAPE:
+  Map: 150×150px
+  University: 280×260px @ top: 20%; right: -20px;
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🎨 LAYOUT VISUAL:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+┌───────────────────────────────────────────────┐
+│ HEXÁGONO     [MAPA: 200×200 GRANDE!]        │
+│              (bem maior agora)               │
+│                      ┌─────────────────────┐│
+│  AS NOSSAS          │ UNIVERSIDADE        ││
+│  MARAVI-            │ 300×280px GRANDE!   ││
+│  LHAS DE            │ (colada à direita)  ││
+│  COIMBRA            │                     ││
+│                     └─────────────────────┘│
+│                                             │
+│  ┌────────────────────────────────────┐    │
+│  │                                    │    │
+│  │      [Botão Iniciar ↑]            │    │
+│  │                                    │    │
+│  └────────────────────────────────────┘    │
+└───────────────────────────────────────────────┘
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+📊 COMPARAÇÃO ANTES/DEPOIS:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Propriedade         │ v2.1        │ v2.2         │ Mudança
+────────────────────┼─────────────┼──────────────┼─────────────
+Map (mobile)        │ 140×140px   │ 200×200px    │ +43%
+Map (desktop)       │ 160×160px   │ 240×240px    │ +50%
+University (mobile) │ 200×180px   │ 300×280px    │ +50%
+University (desk.)  │ 240×220px   │ 360×340px    │ +50%
+University posição  │ bottom:10rem│ top:25%      │ Melhor
+University offset   │ right:0     │ right:-20px  │ Colada
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+✅ ESPECIFICAÇÕES MANTIDAS:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+✓ Proporções mantidas em todas as imagens
+✓ Tamanhos escalados proporcionalmente
+✓ Formas originais preservadas
+✓ Cores exatas (#d9a48b, #1a1a1a, #ffffff)
+✓ Responsividade em 5 breakpoints
+✓ Design fiel ao original (result.png)
+
+🆕 MELHORIAS:
+✓ Mapa bem maior (200-240px)
+✓ Universidade dramaticamente aumentada (300-360px)
+✓ Posicionamento optimizado (colada à direita)
+✓ Layout mais impactante
+✓ Melhor proporcionalidade visual
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+📁 FICHEIRO MODIFICADO:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+style.css
+  ✏️ Ajustado: .map-wrapper (todos os breakpoints)
+  ✏️ Ajustado: .university-wrapper (todos os breakpoints)
+  ✏️ Atualizado: Todas as 5 media queries
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🧪 COMO VERIFICAR:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1. Mapa aumentado?
+   ☑ Bem mais visível que antes?
+   ☑ Altura similar ao polígono?
+
+2. Universidade dramaticamente aumentada?
+   ☑ 300px+ em mobile?
+   ☑ 360px+ em desktop?
+   ☑ Colada à direita?
+
+3. Tamanho similar a result.png?
+   ☑ Proporção correcta?
+   ☑ Visibilidade maximizada?
+
+4. Responsivo em todos os tamanhos?
+   ☑ F12 → Ctrl+Shift+M → Teste diferentes devices
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+📄 DOCUMENTAÇÃO:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Veja ENLARGEMENT_V2.2.md para detalhes completos
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🚀 PRÓXIMOS PASSOS:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1. Teste em seu telemóvel
+2. Verifique em diferentes navegadores
+3. Adapte os restantes 23 ecrãs (Screen 2-24)
+4. Implemente navegação entre ecrãs
+5. Deploy em servidor web
+
+╔═══════════════════════════════════════════════════════════════════════════╗
+║                    ✅ v2.2 PRONTO PARA USAR! 🚀                         ║
+║        Imagens aumentadas significativamente, layout impactante           ║
+╚═══════════════════════════════════════════════════════════════════════════╝
+
+Status: ✅ CONCLUÍDO
+Data: 2026-05-11
+Versão: 2.2 (Image Enlargement)

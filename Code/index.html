@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="description" content="As Nossas Maravilhas de Coimbra">
+    <meta name="theme-color" content="#ffffff">
+    <title>As Nossas Maravilhas de Coimbra</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="app-screen">
+        <!-- Hexagon decoration (top-left) -->
+        <div class="hexagon-shape">
+            <img src="../Screens/screen1/polygon.png" alt="Decoração hexagonal" class="hexagon-img">
+        </div>
+
+        <!-- Map of Coimbra (top-right) -->
+        <div class="map-wrapper">
+            <img src="../Screens/screen1/image1.png" alt="Mapa de Coimbra" class="map-img">
+        </div>
+
+        <!-- Main title text -->
+        <div class="title-wrapper">
+            <h1 class="title-text">AS NOSSAS<br>MARAVI-<br>LHAS<br>DE<br>COIMBRA</h1>
+        </div>
+
+        <!-- University/Church illustration -->
+        <div class="university-wrapper">
+            <img src="../Screens/screen1/university.png" alt="Universidade de Coimbra" class="university-img">
+        </div>
+
+        <!-- Bottom gray rectangle -->
+        <div class="gray-section">
+            <img src="../Screens/screen1/rectange.png" alt="Seção inferior" class="gray-bg">
+            
+            <!-- Start button -->
+            <button class="iniciar-btn" onclick="handleStartClick()">
+                <span class="btn-text">Iniciar</span>
+                <span class="btn-arrow">↑</span>
+            </button>
+        </div>
+    </main>
+
+    <script>
+        function handleStartClick() {
+            console.log('Iniciar clicado');
+        }
+    </script>
+</body>
+</html>
