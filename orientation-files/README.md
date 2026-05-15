@@ -1,16 +1,13 @@
-# As Nossas Maravilhas de Coimbra - Screen 1
+# As Nossas Maravilhas de Coimbra - Documentação Técnica
+
+## 🌐 Aceso Online
+```
+https://pedro-vieira-programmer.github.io/as-nossas-maravilhas-de-coimbra/
+```
+Hospedado em **GitHub Pages** - Sem necessidade de instalação!
 
 ## Descrição
 Esta é a versão web responsiva do ecrã 1 do design Figma da aplicação "As Nossas Maravilhas de Coimbra".
-
-## Estrutura de Ficheiros
-
-```
-Code/
-├── index.html          # HTML semântico com toda a estrutura
-├── style.css           # CSS responsivo com media queries
-└── README.md           # Este ficheiro
-```
 
 ## Funcionamento
 
@@ -40,31 +37,43 @@ Code/
 
 ## Como Usar
 
-### Opção 1: Abrir Diretamente
-1. Abra `index.html` num navegador web (Firefox, Chrome, Safari, Edge, etc.)
-2. O design carrega automaticamente com todas as imagens
+### Opção 1: Aceder Online (Recomendado para Utilizadores)
+Basta abrir no navegador:
+```
+https://pedro-vieira-programmer.github.io/as-nossas-maravilhas-de-coimbra/
+```
 
-### Opção 2: Servidor Local (Recomendado)
+### Opção 2: Desenvolvimento Local (Para Programadores)
+
+**Clone o repositório:**
 ```bash
-# Usando Python 3
+git clone https://github.com/Pedro-Vieira-programmer/as-nossas-maravilhas-de-coimbra.git
+cd as-nossas-maravilhas-de-coimbra
+```
+
+**Inicie servidor local:**
+```bash
+# Python (recomendado)
 python -m http.server 8000
 
-# Usando Node.js/npm
+# Node.js
 npx http-server
 
-# Usando Live Server no VS Code
-# Instale a extensão Live Server e clique "Go Live"
+# VS Code Live Server
+# Clique direito em index.html → "Open with Live Server"
 ```
-Acesse `http://localhost:8000` ou a porta indicada
+
+**Aceda a:**
+```
+http://localhost:8000
+```
 
 ## Imagens Utilizadas
 
-As imagens são referenciadas a partir da pasta `Screens/screen1`:
+As imagens estão localizadas em `Screens/imagens/`:
 - `polygon.png` - Hexágono decorativo (coral)
 - `image1.png` - Mapa de Coimbra
-- `maintext.png` - Título (não utilizada no HTML - texto renderizado)
-- `result.png` - Foto da Torre/Igreja
-- `button.png` - Botão (não utilizada no HTML - botão renderizado)
+- `university.png` - Universidade de Coimbra
 - `rectange.png` - Retângulo cinzento do fundo
 
 ## Breakpoints de Responsive Design
@@ -104,12 +113,13 @@ Para adicionar os restantes 23 ecrãs:
 ## Suporte
 
 Se encontrar problemas com imagens:
-1. Verifique se os ficheiros estão em `Screens/screen1/`
+1. Verifique se os ficheiros estão em `Screens/imagens/`
 2. Certifique-se que os caminhos dos ficheiros estão corretos
 3. Teste num navegador moderno (Chrome, Firefox, Safari, Edge)
 
 ---
 
-**Versão**: 1.0
-**Data**: 2026-05-10
+**Versão**: 2.0
+**Data**: 2026-05-13
 **Status**: ✅ Completo - Screen 1 responsivo
+**Hospedagem**: ✅ GitHub Pages (Online)
