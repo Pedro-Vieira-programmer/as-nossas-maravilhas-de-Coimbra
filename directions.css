@@ -1,5 +1,5 @@
 /* ============================================
-   SCREEN 3 - DIRECTIONS GUIDE
+   Directions screen - DIRECTIONS GUIDE
    Builds on components.css design system
    ============================================ */
 
@@ -22,38 +22,38 @@
     max-width: 100%;
 }
 
-/* ====== SCREEN 3 SPECIFIC COMPONENTS ====== */
+/* ====== DIRECTIONS SCREEN SPECIFIC COMPONENTS ====== */
 
 /* Title with underline */
-.screen3-title {
+.directionsscreen-title {
     width: 100%;
     display: flex;
     justify-content: flex-start;
     margin-bottom: var(--spacing-md);
 }
 
-.screen3-title img {
+.directionsscreen-title img {
     width: auto;
     height: auto;
     max-width: 100%;
 }
 
 /* Subtitle */
-.screen3-subtitle {
+.directionsscreen-subtitle {
     width: 100%;
     display: flex;
     justify-content: flex-start;
     margin-bottom: var(--spacing-lg);
 }
 
-.screen3-subtitle img {
+.directionsscreen-subtitle img {
     width: auto;
     height: auto;
     max-width: 100%;
 }
 
 /* Map Image */
-.screen3-map {
+.directionsscreen-map {
     width: 100%;
     margin: var(--spacing-lg) 0;
     border-radius: var(--radius-md);
@@ -61,45 +61,45 @@
     box-shadow: var(--shadow-md);
 }
 
-.screen3-map img {
+.directionsscreen-map img {
     width: 100%;
     height: auto;
     display: block;
 }
 
 /* Map Link */
-.screen3-map-link {
+.directionsscreen-map-link {
     width: 100%;
     margin: var(--spacing-md) 0;
     display: flex;
     justify-content: flex-start;
 }
 
-.screen3-link {
+.directionsscreen-link {
     text-decoration: none;
     display: inline-block;
     transition: opacity 0.2s ease;
 }
 
-.screen3-link:hover {
+.directionsscreen-link:hover {
     opacity: 0.8;
 }
 
-.screen3-link img {
+.directionsscreen-link img {
     width: auto;
     height: auto;
     max-width: 100%;
 }
 
 /* Address Info */
-.screen3-address {
+.directionsscreen-address {
     width: 100%;
     margin: var(--spacing-lg) 0;
     display: flex;
     justify-content: flex-start;
 }
 
-.screen3-address img {
+.directionsscreen-address img {
     width: auto;
     height: auto;
     max-width: 100%;
@@ -114,7 +114,7 @@
 }
 
 /* Button */
-.screen3-button {
+.directionsscreen-button {
     border: none;
     background: none;
     cursor: pointer;
@@ -126,18 +126,18 @@
     min-height: auto;
 }
 
-.screen3-button img {
+.directionsscreen-button img {
     width: auto;
     height: auto;
     max-width: 100%;
 }
 
-.screen3-button:hover {
+.directionsscreen-button:hover {
     opacity: 0.9;
     transform: scale(1.02);
 }
 
-.screen3-button:active {
+.directionsscreen-button:active {
     opacity: 0.8;
     transform: scale(0.98);
 }
@@ -157,7 +157,7 @@
         gap: var(--spacing-md);
     }
 
-    .screen3-map {
+    .directionsscreen-map {
         margin: var(--spacing-md) 0;
     }
 }
@@ -195,7 +195,7 @@
         gap: var(--spacing-lg);
     }
 
-    .screen3-map {
+    .directionsscreen-map {
         max-width: 600px;
     }
 }
