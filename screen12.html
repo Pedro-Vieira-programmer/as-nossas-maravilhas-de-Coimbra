@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="description" content="Guia - Jardins da Quinta das Lágrimas- As Nossas Maravilhas de Coimbra">
+    <meta name="theme-color" content="#ffffff">
+    <title>Guia - Jardins da Quinta das Lágrimas - As Nossas Maravilhas de Coimbra</title>
+    <link rel="stylesheet" href="components.css">
+    <link rel="stylesheet" href="info.css">
+</head>
+<body>
+    <div class="route-container">
+        <!-- Header with "Guia" title image -->
+        <header class="app-header app-header--guide">
+            <div class="header-background">
+                <img src="./Screens/screen12/Rectangle 2.png" alt="" class="header-bg-image">
+            </div>
+            <img src="./Screens/screen12/Guia.png" alt="Guia" class="app-header__title-image">
+        </header>
+
+        <!-- Main Content -->
+        <main class="app-content app-content--scrollable">
+            <div class="guide-content">
+                <!-- Main Title Card -->
+                <article class="content-card content-card--title">
+                    <h1 class="guide-title">Jardins da Quinta das Lágrimas</h1>
+
+                    <!-- Subtitle and Play Button -->
+                    <div class="guide-intro">
+                        <div class="intro-text">
+                            <h2 class="guide-subtitle">Um local cheio de história e romance</h2>
+                        </div>
+                        <button class="play-button" aria-label="Play audio guide">
+                            <img src="./Screens/screen4/icons8-audio-wave-24 1.png" alt="" class="audio-icon">
+                        </button>
+                    </div>
+
+                    <!-- Description Text -->
+                    <p class="guide-description">
+                        A Quinta das Lágrimas, situada em Coimbra, é um dos lugares mais emblemáticos e românticos de Portugal, profundamente ligada à trágica história de amor entre D. Pedro I e D. Inês de Castro, no século XIV. Inês, dama galega da corte, apaixonou-se pelo príncipe D. Pedro, mas a relação não era aceite por motivos políticos. Por ordem do rei D. Afonso IV, Inês foi assassinada na Quinta, em 1355, enquanto passeava pelos jardins. Anos mais tarde, quando D. Pedro subiu ao trono, vingou-se dos responsáveis e, segundo a lenda, mandou coroar o cadáver de Inês como rainha, obrigando a corte a beijar-lhe a mão. Mandou ainda construir dois túmulos no Mosteiro de Alcobaça, colocados frente a frente, para que “na eternidade se possam olhar”.
+                    </p>
+                    <p class="guide-description">
+                        A Quinta tornou-se, ao longo dos séculos, um símbolo do amor eterno e da tragédia. Atualmente integra um hotel histórico de luxo, mas mantém os seus jardins, fontes e recantos carregados de simbolismo e mistério.
+                    </p>
+                </article>
+
+                <!-- Origin Section -->
+                <article class="content-card content-card--section">
+                    <h2 class="section-title">Curiosidades:</h2>
+                    <!-- Bullet Points -->
+                    <ul class="bullet-list">
+                        <li class="bullet-item">
+                            A famosa Fonte das Lágrimas recebe esse nome porque, segundo a lenda, as lágrimas de Inês misturaram-se com o seu sangue, tingindo as pedras de vermelho;
+                        </li>
+                        <li class="bullet-item">
+                            Há algas avermelhadas nas pedras da fonte, que muitos acreditam representar o “sangue de Inês”;
+                        </li>
+                        <li class="bullet-item">
+                            A Fonte dos Amores simboliza os encontros secretos entre D. Pedro e D. Inês;
+                        </li>
+                        <li class="bullet-item">
+                            A história inspirou várias obras de arte, poemas e peças de teatro ao longo dos séculos.
+                        </li>
+                        <li class="bullet-item">
+                            A Quinta é hoje um dos locais mais procurados em Coimbra para visitas românticas, casamentos e turismo histórico.
+                        </li>
+                    </ul>
+                </article>
+
+                <!-- School Image -->
+                <figure class="school-figure">
+                    <img src="./Screens/screen12/martim-de-freitas1-493 1.png" alt="Quinta das Lágrimas" class="school-image">
+                </figure>
+            </div>
+        </main>
+
+        <!-- Footer with Navigation Buttons -->
+        <footer class="app-footer app-footer--accent">
+            <div class="footer-content">
+                <div class="button-group button-group--horizontal">
+                    <a href="screen11.html">
+                        <button class="btn btn--secondary" onclick="handleVoltarClick()">Voltar</button>
+                    </a>
+                    <a href="screen13.html">
+                        <button class="btn btn--primary" onclick="handleSeguirClick()">Seguir</button>
+                    </a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        function handleVoltarClick() {
+            console.log('Voltar clicado');
+            // Future navigation logic
+        }
+
+        function handleSeguirClick() {
+            console.log('Seguir clicado');
+            // Future navigation logic
+        }
+    </script>
+</body>
+</html>
