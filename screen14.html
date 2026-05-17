@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="description" content="Guia - Baixa Citadina - As Nossas Maravilhas de Coimbra">
+    <meta name="theme-color" content="#ffffff">
+    <title>Guia - Baixa Citadina - As Nossas Maravilhas de Coimbra</title>
+    <link rel="stylesheet" href="components.css">
+    <link rel="stylesheet" href="info.css">
+    <link rel="icon" type="image/png" href="icon.png">
+</head>
+<body>
+    <div class="route-container">
+        <!-- Header with "Guia" title image -->
+        <header class="app-header app-header--guide">
+            <div class="header-background">
+                <img src="./Screens/screen14/Rectangle 2.png" alt="" class="header-bg-image">
+            </div>
+            <img src="./Screens/screen14/Guia.png" alt="Guia" class="app-header__title-image">
+        </header>
+
+        <!-- Main Content -->
+        <main class="app-content app-content--scrollable">
+            <div class="guide-content">
+                <!-- Main Title Card -->
+                <article class="content-card content-card--title">
+                    <h1 class="guide-title">Baixa Citadina</h1>
+                    <!-- Subtitle and Play Button -->
+                    <div class="guide-intro">
+                        <div class="intro-text">
+                            <h2 class="guide-subtitle">Zona comercial e histórica no centro de Coimbra</h2>
+                        </div>
+                        <button class="play-button" aria-label="Play audio guide">
+                            <img src="./Screens/screen4/icons8-audio-wave-24 1.png" alt="" class="audio-icon">
+                        </button>
+                    </div>
+
+                    <!-- Description Text -->
+                    <p class="guide-description">
+                        É uma das zonas mais antigas da cidade. Antigamente, era o local onde viviam comerciantes, artesãos e famílias ligadas à vida urbana. Ao longo do tempo, a Baixa tornou-se um centro de encontro, comércio e circulação de pessoas.
+                    </p>
+                    <p class="guide-description">
+                        Em relação à sua gastronomia, é conhecida pelos seus cafés, pastelarias e restaurantes tradicionais, onde se encontram doces típicos e pratos da cozinha portuguesa. Este ambiente contribui para a vida social da zona, tornando-a um espaço de convívio frequente entre moradores e visitantes.
+                    </p>
+                    <p class="guide-description">
+                        A nível de comércio, destaca-se pelas lojas, mercados e ruas.
+                    </p>
+                    <p class="guide-description">
+                        A Baixa reúne vários monumentos históricos. Entre eles destacam-se a Porta e a Torre de Almedina, que faziam parte das antigas muralhas da cidade, e a Igreja de Santa Cruz, uma marca religiosa e cultural. As suas ruas estreitas, praças e edifícios tradicionais refletem a herança que caracteriza esta zona.
+                    </p>
+                    <p class="guide-description">
+                        A Baixa de Coimbra é um espaço onde se junta história, gastronomia, comércio, cultura e património, formando um centro urbano vivo que continua a evoluir sem perder a sua identidade.
+                    </p>
+                </article>
+
+                <!-- Origin Section -->
+                <article class="content-card content-card--section">
+                    <h2 class="section-title">Igreja de Santa Cruz</h2>
+                    <p class="section-text">
+                        Localiza-se na Baixa de Coimbra, é um dos monumentos históricos mais importantes de Portugal. Foi fundada em 1131 e tornou-se rapidamente um centro religioso e cultural de grande influência. Estão enterrados os dois primeiros reis de Portugal: D. Afonso Henriques e D. Sancho I, razão pela qual a Igreja é conhecida como Panteão dos Primeiros Reis.
+                    </p>
+                    <p class="section-text">
+                        A Igreja destaca-se pelo seu estilo manuelino, pelos túmulos reais, pelo claustro e por vários elementos artísticos que foram acrescentados ao longo dos séculos.
+                    </p>
+                    <p class="section-text">
+                        O edifício combina traços românicos, manuelinos e barrocos, o que mostra a evolução da arte portuguesa.
+                    </p>
+                    <p class="section-text">
+                        Tem um papel importante na cultura e na educação, sendo um dos principais centros de estudo antes da criação da Universidade de Coimbra.
+                    </p>
+                </article>
+
+                <!-- School Image -->
+                <figure class="school-figure">
+                    <img src="./Screens/screen14/martim-de-freitas1-493 1.png" alt="Igreja de Santa Cruz - Fachada" class="school-image">
+                </figure>
+            </div>
+        </main>
+
+        <!-- Footer with Navigation Buttons -->
+        <footer class="app-footer app-footer--accent">
+            <div class="footer-content">
+                <div class="button-group button-group--horizontal">
+                    <a href="screen13.html">
+                        <button class="btn btn--secondary" onclick="handleVoltarClick()">Voltar</button>
+                    </a>
+                    <a href="screen15.html">
+                        <button class="btn btn--primary" onclick="handleSeguirClick()">Seguir</button>
+                    </a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        function handleVoltarClick() {
+            console.log('Voltar clicado');
+            // Future navigation logic
+        }
+
+        function handleSeguirClick() {
+            console.log('Seguir clicado');
+            // Future navigation logic
+        }
+    </script>
+</body>
+</html>
