@@ -1,0 +1,532 @@
+/* ============================================
+   DESIGN SYSTEM - REUSABLE COMPONENTS
+   Shared styles for all screens
+   ============================================ */
+
+/* ====== CSS VARIABLES - DESIGN TOKENS ====== */
+:root {
+    /* Colors */
+    --color-primary: #d9a48b;
+    --color-primary-dark: #d19478;
+    --color-secondary: #2a2a2a;
+    --color-secondary-dark: #1a1a1a;
+    --color-neutral: #ffffff;
+    --color-text: #1a1a1a;
+    --color-text-inverse: #ffffff;
+    --color-overlay: rgba(0, 0, 0, 0.65);
+    
+    /* Spacing */
+    --spacing-xs: 0.5rem;
+    --spacing-sm: 0.8rem;
+    --spacing-md: 1.2rem;
+    --spacing-lg: 1.5rem;
+    --spacing-xl: 2rem;
+    
+    /* Border Radius */
+    --radius-sm: 0.5rem;
+    --radius-md: 0.9rem;
+    --radius-lg: 1rem;
+    --radius-xl: 2rem;
+    
+    /* Typography */
+    --font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    --font-size-sm: 0.85rem;
+    --font-size-base: 0.9rem;
+    --font-size-md: 1rem;
+    --font-size-lg: 1.2rem;
+    --font-size-xl: 1.3rem;
+    --font-weight-regular: 600;
+    --font-weight-bold: 700;
+    
+    /* Shadows */
+    --shadow-sm: 0 3px 10px rgba(0, 0, 0, 0.12);
+    --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.15);
+    --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+/* ====== RESET & BASE STYLES ====== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    font-family: var(--font-family);
+    background-color: var(--color-neutral);
+}
+
+/* ====== CONTAINER LAYOUT ====== */
+.app-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Main app layout - full screen */
+.route-container {
+    width: 100%;
+    min-height: 100vh;
+    background-color: var(--color-neutral);
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+/* ====== HEADER COMPONENT ====== */
+.app-header {
+    width: 100%;
+    padding: var(--spacing-md) var(--spacing-lg) var(--spacing-sm) var(--spacing-lg);
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: var(--spacing-md);
+    border-bottom: 2px solid var(--color-text);
+    background-color: var(--color-neutral);
+    flex-shrink: 0;
+}
+
+.app-header--with-image {
+    padding: var(--spacing-md) var(--spacing-lg);
+    justify-content: flex-start;
+}
+
+.app-header__title-image {
+    height: auto;
+    max-height: 50px;
+    width: auto;
+    object-fit: contain;
+    display: block;
+}
+
+/* ====== TITLE COMPONENT ====== */
+.app-title {
+    font-size: var(--font-size-lg);
+    font-weight: var(--font-weight-bold);
+    color: var(--color-text);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin: 0;
+    line-height: 1.1;
+    font-family: var(--font-family);
+}
+
+.app-title--underline {
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 4px;
+}
+
+/* ====== CONTENT AREA COMPONENT ====== */
+.app-content {
+    width: 100%;
+    flex: 1;
+    padding: var(--spacing-sm) var(--spacing-md);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+}
+
+.app-content--scrollable {
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+/* Scrollbar styling */
+.app-content--scrollable::-webkit-scrollbar {
+    width: 6px;
+}
+
+.app-content--scrollable::-webkit-scrollbar-track {
+    background: #f0f0f0;
+}
+
+.app-content--scrollable::-webkit-scrollbar-thumb {
+    background: var(--color-primary);
+    border-radius: 3px;
+}
+
+.app-content--scrollable::-webkit-scrollbar-thumb:hover {
+    background: var(--color-primary-dark);
+}
+
+/* ====== FOOTER COMPONENT ====== */
+.app-footer {
+    width: 100%;
+    padding: var(--spacing-lg) var(--spacing-lg) var(--spacing-xl) var(--spacing-lg);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-lg);
+    border-radius: var(--radius-xl) var(--radius-xl) 0 0;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.08);
+    flex-shrink: 0;
+    background-color: var(--color-neutral);
+}
+
+.app-footer--accent {
+    background-color: var(--color-primary);
+}
+
+/* ====== FOOTER TITLE ====== */
+.footer-title {
+    font-size: var(--font-size-base);
+    font-weight: var(--font-weight-bold);
+    color: var(--color-text);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+.footer-title--underline {
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 3px;
+}
+
+/* ====== BUTTON COMPONENT ====== */
+.btn {
+    padding: var(--spacing-sm) var(--spacing-md);
+    border: none;
+    border-radius: var(--radius-md);
+    font-size: var(--font-size-base);
+    font-weight: var(--font-weight-bold);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: capitalize;
+    letter-spacing: 0.2px;
+    font-family: var(--font-family);
+    white-space: nowrap;
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn--primary {
+    background-color: var(--color-secondary);
+    color: var(--color-text-inverse);
+}
+
+.btn--primary:hover {
+    background-color: var(--color-secondary-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.btn--primary:active {
+    transform: translateY(-1px);
+}
+
+.btn--secondary-non {
+    background-color: var(--color-primary);
+    color: var(--color-text);
+    border: 2px solid var(--color-text);
+}
+
+
+.btn--secondary {
+    background-color: var(--color-primary);
+    color: var(--color-text);
+    border: 2px solid var(--color-text);
+}
+
+.btn--secondary:hover {
+    background-color: var(--color-primary-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.btn--secondary:active {
+    transform: translateY(-1px);
+}
+
+/* ====== BUTTON GROUP ====== */
+.button-group {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+    width: 100%;
+    max-width: 200px;
+    align-items: center;
+}
+
+.button-group--horizontal {
+    flex-direction: row;
+    justify-content: center;
+}
+
+/* ====== LIST CONTAINER ====== */
+.route-list {
+    width: 100%;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+}
+
+/* ====== ROUTE CARD COMPONENT ====== */
+.route-card {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-xs);
+}
+
+.route-card__image {
+    width: 90%;
+    max-width: 280px;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    border-radius: var(--radius-lg);
+    object-fit: cover;
+    display: block;
+    box-shadow: var(--shadow-sm);
+}
+
+.route-card__label {
+    position: relative;
+    width: 90%;
+    max-width: 280px;
+    padding: var(--spacing-sm) var(--spacing-sm);
+    background-color: var(--color-overlay);
+    color: var(--color-text-inverse);
+    font-size: var(--font-size-base);
+    font-weight: var(--font-weight-bold);
+    text-align: center;
+    border-radius: var(--radius-sm);
+    margin-top: -2.6rem;
+    z-index: 5;
+    line-height: 1.3;
+    font-family: var(--font-family);
+    margin: 0;
+}
+
+/* ====== ROUTE DIVIDER COMPONENT ====== */
+.route-divider {
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: var(--spacing-xs) 0;
+    flex-shrink: 0;
+}
+
+.route-divider__icon {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+    display: block;
+}
+
+/* ====== FOOTER CONTENT ====== */
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-lg);
+    width: 100%;
+}
+
+/* ====== RESPONSIVE - MOBILE (< 480px) ====== */
+@media (max-width: 479px) {
+    :root {
+        --font-size-base: 0.85rem;
+        --font-size-lg: 1.05rem;
+        --spacing-lg: 1.2rem;
+        --spacing-md: 1rem;
+    }
+    
+    .app-header {
+        padding: var(--spacing-md) var(--spacing-md) var(--spacing-xs) var(--spacing-md);
+    }
+    
+    .app-header--with-image {
+        padding: var(--spacing-sm) var(--spacing-md);
+    }
+    
+    .app-header__title-image {
+        max-height: 40px;
+    }
+    
+    .app-title {
+        font-size: var(--font-size-lg);
+    }
+    
+    .app-content {
+        padding: var(--spacing-xs) var(--spacing-md);
+    }
+    
+    .route-card__image {
+        width: 90%;
+        max-width: 100%;
+    }
+    
+    .route-card__label {
+        width: 90%;
+        max-width: 100%;
+        padding: var(--spacing-xs) var(--spacing-xs);
+    }
+    
+    .route-divider__icon {
+        width: 20px;
+        height: 20px;
+    }
+    
+    .app-footer {
+        padding: var(--spacing-md) var(--spacing-md) var(--spacing-lg) var(--spacing-md);
+    }
+    
+    .btn {
+        padding: var(--spacing-xs) var(--spacing-md);
+        font-size: var(--font-size-base);
+    }
+}
+
+/* ====== RESPONSIVE - TABLET (480px - 768px) ====== */
+@media (min-width: 480px) and (max-width: 768px) {
+    :root {
+        --font-size-lg: 1.15rem;
+        --spacing-lg: 1.5rem;
+    }
+    
+    .app-header {
+        padding: var(--spacing-md) var(--spacing-lg) var(--spacing-xs) var(--spacing-lg);
+    }
+    
+    .app-header--with-image {
+        padding: var(--spacing-sm) var(--spacing-lg);
+    }
+    
+    .app-header__title-image {
+        max-height: 45px;
+    }
+    
+    .app-content {
+        padding: var(--spacing-md) var(--spacing-lg);
+    }
+    
+    .route-card__image {
+        max-width: 320px;
+    }
+    
+    .route-card__label {
+        max-width: 320px;
+    }
+    
+    .app-footer {
+        padding: var(--spacing-lg) var(--spacing-lg) var(--spacing-lg) var(--spacing-lg);
+    }
+}
+
+/* ====== RESPONSIVE - DESKTOP (> 768px) ====== */
+@media (min-width: 769px) {
+    :root {
+        --font-size-lg: 1.3rem;
+        --spacing-lg: 2rem;
+    }
+    
+    .app-header {
+        padding: var(--spacing-lg) var(--spacing-xl) var(--spacing-md) var(--spacing-xl);
+    }
+    
+    .app-header--with-image {
+        padding: var(--spacing-md) var(--spacing-xl);
+    }
+    
+    .app-header__title-image {
+        max-height: 50px;
+    }
+    
+    .app-content {
+        padding: var(--spacing-lg) var(--spacing-xl);
+    }
+    
+    .route-card__image {
+        width: 85%;
+        max-width: 380px;
+    }
+    
+    .route-card__label {
+        width: 85%;
+        max-width: 380px;
+    }
+    
+    .app-footer {
+        padding: var(--spacing-xl) var(--spacing-xl);
+    }
+    
+    .btn {
+        max-width: 220px;
+        padding: var(--spacing-sm) var(--spacing-lg);
+    }
+}
+
+/* ====== RESPONSIVE - LANDSCAPE ====== */
+@media (orientation: landscape) {
+    :root {
+        --font-size-lg: 1rem;
+        --spacing-lg: 1.5rem;
+    }
+    
+    .route-container {
+        min-height: auto;
+    }
+    
+    .app-header {
+        padding: var(--spacing-xs) var(--spacing-lg) var(--spacing-xs) var(--spacing-lg);
+    }
+    
+    .app-header--with-image {
+        padding: var(--spacing-xs) var(--spacing-lg);
+    }
+    
+    .app-header__title-image {
+        max-height: 35px;
+    }
+    
+    .app-title {
+        font-size: var(--font-size-base);
+    }
+    
+    .app-content {
+        padding: var(--spacing-sm) var(--spacing-lg);
+        max-height: 65vh;
+    }
+    
+    .route-card__image {
+        width: 70%;
+        max-width: 240px;
+        height: 135px;
+    }
+    
+    .route-card__label {
+        width: 70%;
+        max-width: 240px;
+        font-size: var(--font-size-sm);
+        padding: var(--spacing-xs) var(--spacing-xs);
+        margin-top: -2rem;
+    }
+    
+    .route-divider__icon {
+        width: 18px;
+        height: 18px;
+    }
+    
+    .app-footer {
+        padding: var(--spacing-md) var(--spacing-lg);
+    }
+    
+    .btn {
+        padding: var(--spacing-xs) var(--spacing-md);
+        font-size: var(--font-size-sm);
+    }
+}

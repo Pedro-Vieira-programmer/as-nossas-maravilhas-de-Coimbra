@@ -1,0 +1,66 @@
+/* ============================================
+   SCREEN 2 - A NOSSA ROTA
+   Route display with vertical scroll
+   ============================================ */
+
+/* Screen 2 specific overrides and custom styles */
+
+body {
+    background-color: var(--color-neutral);
+    overflow: auto;
+}
+
+.route-container {
+    /* Uses default app-container styles from components.css */
+}
+
+.app-header {
+    /* Uses default styles from components.css */
+}
+
+.app-content {
+    /* Uses default app-content--scrollable styles */
+}
+
+/* Route specific adjustments */
+.route-list {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.route-card {
+    margin-bottom: var(--spacing-xs);
+}
+
+.app-footer {
+    /* Uses accent color from components.css */
+}
+
+/* ====== SCREEN-SPECIFIC RESPONSIVE OVERRIDES ====== */
+
+/* Mobile optimizations for Screen 2 */
+@media (max-width: 479px) {
+    .route-card__image {
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+}
+
+/* Tablet optimizations for Screen 2 */
+@media (min-width: 480px) and (max-width: 768px) {
+    .route-card__label {
+        padding: var(--spacing-sm) var(--spacing-sm);
+    }
+}
+
+/* Desktop optimizations for Screen 2 */
+@media (min-width: 769px) {
+    .route-card {
+        transition: transform 0.2s ease;
+    }
+    
+    .route-card:hover .route-card__image {
+        box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+    }
+}

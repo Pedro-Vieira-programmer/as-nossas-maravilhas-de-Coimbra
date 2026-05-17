@@ -6,7 +6,7 @@ Uma aplicação web responsiva que transforma o design Figma em uma experiência
 
 Este projeto converte o design do Figma "As Nossas Maravilhas de Coimbra" numa aplicação web completamente responsiva, mantendo 100% de fidelidade visual ao design original em todas as plataformas (desktop, tablet, mobile).
 
-**Status**: ✅ Screen 1 completo e responsivo | 📈 Escalável para 24 screens
+**Status**: ✅ Screen 1 completo e responsivo | ✅ Screen 2 completo (Rota) | 📈 Escalável para 24 screens
 
 ## ✨ Características Principais
 
@@ -61,27 +61,23 @@ npx http-server
 
 ```
 as-nossas-maravilhas-de-coimbra/
-├── index.html                  # Ficheiro principal
-├── style.css                   # Estilos responsivos
-├── test-responsive.html        # Página de teste
+├── index.html                   # Screen 1 - Tela inicial
+├── style.css                    # Estilos do Screen 1
+├── screen2.html                 # Screen 2 - Rota linear (11 pontos)
+├── screen2.css                  # Estilos específicos do Screen 2
 │
-├── Screens/
-│   └── imagens/               # Assets do projeto
-│       ├── polygon.png        # Decoração hexagonal
-│       ├── image1.png         # Mapa de Coimbra
-│       ├── university.png     # Foto da Universidade
-│       └── rectange.png       # Fundo
+├── components.css               # Sistema de componentes reutilizáveis
+├── test-responsive.html         # Página de teste responsivo
 │
-├── orientation-files/          # Documentação
-│   ├── README.md              # Docs técnicas
-│   ├── SETUP.md               # Setup detalhado
-│   ├── CHANGES.md             # Alterações
-│   └── ...
+├── Screens/                     # Assets e recursos visuais
+│   ├── screen1/                 # Imagens do Screen 1
+│   ├── screen2/                 # Imagens do Screen 2 (rota)
+│   └── screen3 até screen24/    # Pastas preparadas para futuros screens
 │
-├── .github/
-│   └── CONTRIBUTING.md        # Diretrizes de contribuição
+├── orientation-files/           # Documentação auxiliar
 │
-└── docs/                       # Documentação adicional
+└── .github/
+    └── CONTRIBUTING.md          # Diretrizes de contribuição
 ```
 
 ## 🎨 Cores Principais
@@ -123,8 +119,9 @@ open test-responsive.html
 
 ## 🔮 Roadmap
 
-- [x] Screen 1 - Implementação inicial
-- [ ] Screens 2-24 - Implementação em cadeia
+- [x] Screen 1 - Tela inicial (Iniciar)
+- [x] Screen 2 - Rota linear (11 pontos turísticos)
+- [ ] Screens 3-24 - Implementação em cadeia
 - [ ] Navegação entre screens
 - [ ] Animações e interações
 - [ ] Backend (se necessário)
@@ -159,13 +156,14 @@ Este projeto é parte do portfólio educacional da Universidade de Coimbra.
 
 ---
 
-**Versão**: 2.0  
-**Data**: 2026-05-13  
-**Status**: ✅ Pronto para GitHub  
+**Versão**: 2.1  
+**Data**: 2026-05-17  
+**Status**: ✅ Screen 1 + Screen 2 implementados | 📈 Pronto para GitHub  
 **Desenvolvedor**: Pedro Vieira
 
 ### 🔗 Links Rápidos
 - 📖 [Documentação Completa](./orientation-files/README.md)
-- ⚙️ [Setup e Configuração](./orientation-files/SETUP.md)
+- 🎨 [Design System](./DESIGN_SYSTEM.md)
+- 🔧 [Screen 2 - Implementação](./SCREEN2_IMPLEMENTATION.md)
 - 🐛 [Reporte um Bug](./orientation-files/README.md#troubleshooting)
-- 🎯 [Roadmap do Projeto](./orientation-files/README.md)
+- 🎯 [Roadmap do Projeto](./README.md#-roadmap)

@@ -65,12 +65,20 @@ git --version
 ### Para Utilizadores Finais ✅
 Pronto! Aceda a: https://pedro-vieira-programmer.github.io/as-nossas-maravilhas-de-coimbra/
 
+**Screens disponíveis:**
+- **Screen 1**: Tela inicial "As Nossas Maravilhas de Coimbra"
+- **Screen 2**: Rota linear com 11 pontos turísticos
+
 ### Para Desenvolvedores 🔧
 1. Clone o repositório (ver Setup acima)
 2. Inicie servidor local
-3. Aceda a http://localhost:8000
-4. Leia [orientation-files/README.md](./orientation-files/README.md) para docs técnicas
-5. Consulte [.github/CONTRIBUTING.md](./.github/CONTRIBUTING.md) para contribuir
+3. Aceda a `http://localhost:8000`
+4. **Teste os screens disponíveis:**
+   - `http://localhost:8000/index.html` - Screen 1
+   - `http://localhost:8000/screen2.html` - Screen 2 (Rota)
+5. Leia [SCREEN2_IMPLEMENTATION.md](./SCREEN2_IMPLEMENTATION.md) para entender o padrão implementado
+6. Leia [DESIGN_SYSTEM.md](./DESIGN_SYSTEM.md) para documentação do sistema de componentes
+7. Consulte [.github/CONTRIBUTING.md](./.github/CONTRIBUTING.md) para contribuir
 
 ---
 
@@ -189,7 +197,8 @@ Em DevTools:
 
 | Tópico | Ficheiro |
 |--------|----------|
-| **Docs Técnicas** | [orientation-files/README.md](./orientation-files/README.md) |
+| **Docs Técnicas** | [DESIGN_SYSTEM.md](./DESIGN_SYSTEM.md) |
+| **Screen 2** | [SCREEN2_IMPLEMENTATION.md](./SCREEN2_IMPLEMENTATION.md) |
 | **Setup Detalhado** | [orientation-files/SETUP.md](./orientation-files/SETUP.md) |
 | **Como Contribuir** | [.github/CONTRIBUTING.md](./.github/CONTRIBUTING.md) |
 | **Histórico** | [orientation-files/CHANGES.md](./orientation-files/CHANGES.md) |
@@ -221,8 +230,8 @@ Em DevTools:
 
 ---
 
-**Versão**: 2.0
-**Atualizado**: 13 de Maio de 2026
-**Status**: ✅ Pronto para GitHub Pages
+**Versão**: 2.1
+**Atualizado**: 17 de Maio de 2026
+**Status**: ✅ Pronto para GitHub Pages - Screen 1 + Screen 2
 
 🎉 Bem-vindo! Divirta-se explorando "As Nossas Maravilhas de Coimbra"!
