@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="description" content="Guia - Jardim Botânico da UC - As Nossas Maravilhas de Coimbra">
+    <meta name="theme-color" content="#ffffff">
+    <title>Guia - Jardim Botânico da UC - As Nossas Maravilhas de Coimbra</title>
+    <link rel="stylesheet" href="components.css">
+    <link rel="stylesheet" href="info.css">
+</head>
+<body>
+    <div class="route-container">
+        <!-- Header with "Guia" title image -->
+        <header class="app-header app-header--guide">
+            <div class="header-background">
+                <img src="./Screens/screen8/Rectangle 2.png" alt="" class="header-bg-image">
+            </div>
+            <img src="./Screens/screen8/Guia.png" alt="Guia" class="app-header__title-image">
+        </header>
+
+        <!-- Main Content -->
+        <main class="app-content app-content--scrollable">
+            <div class="guide-content">
+                <!-- Main Title Card -->
+                <article class="content-card content-card--title">
+                    <h1 class="guide-title">Jardim Botânico da UC</h1>
+
+                    <!-- Subtitle and Play Button -->
+                    <div class="guide-intro">
+                        <div class="intro-text">
+                            <h2 class="guide-subtitle">Um local onde as plantas e o ensino se misturam</h2>
+                        </div>
+                        <button class="play-button" aria-label="Play audio guide">
+                            <img src="./Screens/screen4/icons8-audio-wave-24 1.png" alt="" class="audio-icon">
+                        </button>
+                    </div>
+
+                    <!-- Description Text -->
+                    <p class="guide-description">
+                        O Jardim Botânico de Coimbra foi criado em 1772, no reinado de D. José I. O seu ministro, Marquês de Pombal, construiu-o para tornar o ensino nas áreas da Botânica e da Medicina mais prático e educativo. O primeiro diretor deste jardim foi o italiano Romenico Agostino Vandelli, e o segundo foi Avelar Brotero (1744-1828), botânico português.
+                    </p>
+                    <p class="guide-description">
+                        Este jardim, que normalmente é de entrada livre, possui uma extensa coleção de plantas (mais de 1500 espécies), desde palmeiras, como a palmeira-das-vassouras (Chamaerops humilis), até plantas carnívoras que podemos encontrar na famosa Estufa Tropical, desde sempre desejada pelos diretores do jardim para poderem cultivar plantas de outras regiões.
+                    </p>
+                    <p class="guide-description">
+                        Além disso, neste jardim podemos também encontrar o Bambuzal, dominado pelo conhecido bambu-gigante (Phyllostachys reticulata), que em condições ideais pode crescer até 5 cm por hora e atingir 8 m de altura!
+                    </p>
+                    <p class="guide-description">
+                        Também não pode ser esquecida a célebre Figueira-Estranguladora (Ficus macrophylla). Esta árvore de 20 m, cujas raízes gigantes saem do solo, tem a capacidade de germinar por cima das árvores à sua volta, tornando-as suas presas. No entanto, esta árvore emblemática foi drasticamente afetada pela tempestade Leslie em 2018, e atualmente encontra-se em recuperação.
+                    </p>
+                    <p class="guide-description">
+                        Finalmente, é importante saber que no Jardim Botânico não se encontram apenas seres vivos, mas também monumentos históricos. As várias entradas do Jardim, por exemplo, são obras de arte que não podem deixar de ser observadas.
+                    </p>
+                    <p class="guide-description">
+                        É assim fácil de perceber que uma visita a esta maravilha da cidade de Coimbra é uma viagem didática, interessante, sensibilizadora e imperdível, que aconselhamos a todos os turistas.
+                    </p>
+                </article>
+
+                <!-- Origin Section -->
+                <article class="content-card content-card--section">
+                    <h2 class="section-title">Curiosidade</h2>
+                    <p class="section-text">
+                        Existe uma adivinha tradicionalmente contada em Coimbra: “Preto é, Galinha o fez. O que é?”. A resposta não é nada mais nada menos do que o portão da entrada principal do Jardim Botânico, uma vez que este portão de cor preta é obra de Manuel Bernardes Galinha.
+                    </p>
+                </article>
+
+                <!-- School Image -->
+                <figure class="school-figure">
+                    <img src="./Screens/screen8/martim-de-freitas1-493 1.png" alt="Jardim Botânico" class="school-image">
+                </figure>
+            </div>
+        </main>
+
+        <!-- Footer with Navigation Buttons -->
+        <footer class="app-footer app-footer--accent">
+            <div class="footer-content">
+                <div class="button-group button-group--horizontal">
+                    <a href="screen7.html">
+                        <button class="btn btn--secondary" onclick="handleVoltarClick()">Voltar</button>
+                    </a>
+                    <a href="screen9.html">
+                        <button class="btn btn--primary" onclick="handleSeguirClick()">Seguir</button>
+                    </a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        function handleVoltarClick() {
+            console.log('Voltar clicado');
+            // Future navigation logic
+        }
+
+        function handleSeguirClick() {
+            console.log('Seguir clicado');
+            // Future navigation logic
+        }
+    </script>
+</body>
+</html>
