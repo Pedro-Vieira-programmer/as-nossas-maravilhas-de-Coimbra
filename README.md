@@ -6,10 +6,11 @@ Uma aplicação web responsiva que transforma o design Figma em uma experiência
 
 Este projeto converte o design do Figma "As Nossas Maravilhas de Coimbra" numa aplicação web completamente responsiva, mantendo 100% de fidelidade visual ao design original em todas as plataformas (desktop, tablet, mobile).
 
-**Status**: ✅ Screen 1 completo e responsivo | ✅ Screen 2 completo (Rota) | 📈 Escalável para 24 screens
+**Status**: ✅ Screen 1 (Tela Inicial) | ✅ Screen 2 (Rota) | ✅ Screen 3 (Guia) | 📈 Escalável para 24 screens
 
 ## ✨ Características Principais
 
+- ✅ **Arquitetura Modular**: Design system centralizado + estilos específicos por screen
 - ✅ **Totalmente Responsivo**: Desktop, Tablet, Mobile (360px - 1920px)
 - ✅ **Mobile-First Design**: Otimizado para pequenos ecrãs com upgrade para grandes
 - ✅ **Design Preservado**: Cores, textos, imagens e espaçamentos 100% fiéis
@@ -17,6 +18,7 @@ Este projeto converte o design do Figma "As Nossas Maravilhas de Coimbra" numa a
 - ✅ **Sem Dependências**: HTML5 + CSS3 puro (sem frameworks)
 - ✅ **Performance**: Otimizado para carregamento rápido
 - ✅ **Notch/Safe Area**: Suporte para dispositivos com notch (iPhones X+)
+- ✅ **CSS Variables**: Sistema de cores e tokens centralizado
 
 ## 📊 Compatibilidade
 
@@ -61,18 +63,24 @@ npx http-server
 
 ```
 as-nossas-maravilhas-de-coimbra/
-├── index.html                   # Screen 1 - Tela inicial
-├── style.css                    # Estilos do Screen 1
-├── screen2.html                 # Screen 2 - Rota linear (11 pontos)
-├── screen2.css                  # Estilos específicos do Screen 2
+├── components.css               # DESIGN SYSTEM (CSS Variables + componentes reutilizáveis)
 │
-├── components.css               # Sistema de componentes reutilizáveis
+├── index.html                   # Screen 1 - Tela Inicial
+├── style.css                    # Estilos específicos Screen 1
+│
+├── screen2.html                 # Screen 2 - Rota (11 pontos)
+├── screen2.css                  # Estilos específicos Screen 2
+│
+├── screen3.html                 # Screen 3 - Guia de Direções
+├── screen3.css                  # Estilos específicos Screen 3
+│
 ├── test-responsive.html         # Página de teste responsivo
 │
 ├── Screens/                     # Assets e recursos visuais
 │   ├── screen1/                 # Imagens do Screen 1
 │   ├── screen2/                 # Imagens do Screen 2 (rota)
-│   └── screen3 até screen24/    # Pastas preparadas para futuros screens
+│   ├── screen3/                 # Imagens do Screen 3 (guia)
+│   └── screen4 até screen24/    # Pastas preparadas para futuros screens
 │
 ├── orientation-files/           # Documentação auxiliar
 │
@@ -83,24 +91,27 @@ as-nossas-maravilhas-de-coimbra/
 ## 🎨 Cores Principais
 
 ```
-Coral/Peach:        #d9a48b
-Dark Text:          #1a1a1a
-Light Gray:         #f5f5f5
-White:              #ffffff
+Coral/Peach (Primário):  #d9a48b
+Coral/Peach (Escuro):    #d19478
+Preto (Secundário):      #2a2a2a
+Preto (Muito Escuro):    #1a1a1a
+Branco (Neutral):        #ffffff
 ```
 
 ## 🔧 Tecnologias Utilizadas
 
 - **HTML5**: Semântica e acessibilidade
-- **CSS3**: Grid, Flexbox, Media Queries
+- **CSS3**: Grid, Flexbox, Media Queries, CSS Variables
 - **Vanilla JavaScript**: Sem dependências
 - **PNG**: Imagens otimizadas
 
 ## 📚 Documentação
 
+- **[ARCHITECTURE.md](./ARCHITECTURE.md)** - Estrutura modular e como escalar para 24 screens
+- **[DESIGN_SYSTEM.md](./DESIGN_SYSTEM.md)** - Sistema de design, componentes e CSS Variables
+- **[SCREEN_TEMPLATES.md](./SCREEN_TEMPLATES.md)** - Template rápido para novos screens
 - **[GETTING_STARTED.md](./GETTING_STARTED.md)** - Guia de início rápido
 - **[orientation-files/README.md](./orientation-files/README.md)** - Documentação técnica
-- **[orientation-files/SETUP.md](./orientation-files/SETUP.md)** - Setup e configuração
 - **[.github/CONTRIBUTING.md](./.github/CONTRIBUTING.md)** - Como contribuir
 
 ## 🧪 Testes
@@ -117,11 +128,21 @@ White:              #ffffff
 open test-responsive.html
 ```
 
+## 📊 Screens Implementados
+
+| Screen | Nome | Estado | Descrição |
+|--------|------|--------|-----------|
+| 1 | Tela Inicial | ✅ Completo | "As Nossas Maravilhas de Coimbra" - Landing page |
+| 2 | A Nossa Rota | ✅ Completo | 11 pontos turísticos em rota linear |
+| 3 | Guia de Direções | ✅ Completo | Guia com mapa e direções |
+| 4-24 | Futuros | ⏳ Preparado | Pronto para implementação |
+
 ## 🔮 Roadmap
 
-- [x] Screen 1 - Tela inicial (Iniciar)
-- [x] Screen 2 - Rota linear (11 pontos turísticos)
-- [ ] Screens 3-24 - Implementação em cadeia
+- [x] Screen 1 - Tela inicial (Completo)
+- [x] Screen 2 - Rota linear (Completo)
+- [x] Screen 3 - Guia de Direções (Completo)
+- [ ] Screens 4-24 - Implementação em cadeia
 - [ ] Navegação entre screens
 - [ ] Animações e interações
 - [ ] Backend (se necessário)
@@ -130,6 +151,7 @@ open test-responsive.html
 
 Consulte [CONTRIBUTING.md](./.github/CONTRIBUTING.md) para:
 - Diretrizes de código
+- Padrão modular (components.css + screenX.css)
 - Processo de pull requests
 - Reporte de bugs
 - Sugestões de melhorias
@@ -137,8 +159,8 @@ Consulte [CONTRIBUTING.md](./.github/CONTRIBUTING.md) para:
 ## 📞 Suporte
 
 ### Imagens não carregam?
-- Verifique se `Screens/imagens/` existe
-- Confirme paths: `./Screens/imagens/filename.png`
+- Verifique se `Screens/` existe
+- Confirme paths: `./Screens/screenX/filename.png`
 - Teste com servidor local
 
 ### Layout não responsivo?
@@ -148,7 +170,8 @@ Consulte [CONTRIBUTING.md](./.github/CONTRIBUTING.md) para:
 
 ### Mais ajuda?
 - Verifique a console do navegador (`F12`)
-- Leia [orientation-files/SETUP.md](./orientation-files/SETUP.md)
+- Leia [ARCHITECTURE.md](./ARCHITECTURE.md)
+- Leia [DESIGN_SYSTEM.md](./DESIGN_SYSTEM.md)
 
 ## 📄 Licença
 
@@ -156,14 +179,17 @@ Este projeto é parte do portfólio educacional da Universidade de Coimbra.
 
 ---
 
-**Versão**: 2.1  
+**Versão**: 2.2  
 **Data**: 2026-05-17  
-**Status**: ✅ Screen 1 + Screen 2 implementados | 📈 Pronto para GitHub  
-**Desenvolvedor**: Pedro Vieira
+**Status**: ✅ Screens 1-3 implementados com padrão modular | 📈 Pronto para GitHub  
+**Desenvolvedor**: Pedro Vieira  
+**Co-autoria**: Copilot
 
 ### 🔗 Links Rápidos
-- 📖 [Documentação Completa](./orientation-files/README.md)
+- 📖 [Arquitetura](./ARCHITECTURE.md)
 - 🎨 [Design System](./DESIGN_SYSTEM.md)
-- 🔧 [Screen 2 - Implementação](./SCREEN2_IMPLEMENTATION.md)
+- 🏗️ [Screen Templates](./SCREEN_TEMPLATES.md)
+- 🚀 [Getting Started](./GETTING_STARTED.md)
+- 🔧 [Documentação Técnica](./orientation-files/README.md)
 - 🐛 [Reporte um Bug](./orientation-files/README.md#troubleshooting)
 - 🎯 [Roadmap do Projeto](./README.md#-roadmap)

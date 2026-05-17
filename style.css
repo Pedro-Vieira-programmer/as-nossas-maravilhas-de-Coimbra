@@ -1,45 +1,22 @@
 /* ============================================
-   AS NOSSAS MARAVILHAS DE COIMBRA - MOBILE APP
-   Mobile-First Design
+   SCREEN 1 - TELA INICIAL
+   "As Nossas Maravilhas de Coimbra"
+   Estilos específicos para Screen 1
    ============================================ */
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-html, body {
-    width: 100%;
-    height: 100%;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
-}
-
-body {
-    width: 100%;
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #ffffff;
-    padding: 0;
-    margin: 0;
-    overflow: hidden;
-}
-
-/* Main app screen - Mobile viewport */
-.app-screen {
+/* Main Screen 1 container */
+.screen1-container {
     position: relative;
     width: 100vw;
     height: 100vh;
-    background-color: #ffffff;
+    background-color: var(--color-neutral);
     overflow: hidden;
     display: flex;
     flex-direction: column;
 }
 
 /* ====== HEXAGON DECORATION (Top-Left) ====== */
-.hexagon-shape {
+.screen1-hexagon-shape {
     position: absolute;
     top: 0;
     left: 0;
@@ -49,15 +26,15 @@ body {
     overflow: visible;
 }
 
-.hexagon-img {
+.screen1-hexagon-img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     display: block;
 }
 
-/* ====== MAP WRAPPER (Top-Right - Same level as hexagon, much larger) ====== */
-.map-wrapper {
+/* ====== MAP WRAPPER (Top-Right) ====== */
+.screen1-map-wrapper {
     position: absolute;
     top: 0;
     right: 0;
@@ -70,7 +47,7 @@ body {
     padding: 0.5rem;
 }
 
-.map-img {
+.screen1-map-img {
     width: 100%;
     height: 100%;
     object-fit: contain;
@@ -78,7 +55,7 @@ body {
 }
 
 /* ====== TITLE TEXT (Main Heading) ====== */
-.title-wrapper {
+.screen1-title-wrapper {
     position: absolute;
     top: 9rem;
     left: 1.5rem;
@@ -87,20 +64,20 @@ body {
     width: auto;
 }
 
-.title-text {
+.screen1-title-text {
     font-size: 3rem;
     font-weight: 900;
     line-height: 1;
-    color: #1a1a1a;
+    color: var(--color-text);
     letter-spacing: -0.03em;
     word-break: break-word;
     text-transform: uppercase;
     margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif;
+    font-family: var(--font-family);
 }
 
-/* ====== UNIVERSITY/CHURCH ILLUSTRATION (Much larger, fully right-aligned, like result.png) ====== */
-.university-wrapper {
+/* ====== UNIVERSITY/CHURCH ILLUSTRATION ====== */
+.screen1-university-wrapper {
     position: absolute;
     top: 25%;
     right: -20px;
@@ -112,15 +89,15 @@ body {
     justify-content: center;
 }
 
-.university-img {
+.screen1-university-img {
     width: 100%;
     height: 100%;
     object-fit: contain;
     display: block;
 }
 
-/* ====== GRAY SECTION WITH BUTTON (With rounded corners like original) ====== */
-.gray-section {
+/* ====== GRAY SECTION WITH BUTTON ====== */
+.screen1-gray-section {
     position: absolute;
     bottom: 0;
     left: 0;
@@ -135,7 +112,7 @@ body {
     border-radius: 3rem 3rem 0 0;
 }
 
-.gray-bg {
+.screen1-gray-bg {
     position: absolute;
     top: 0;
     left: 0;
@@ -147,16 +124,16 @@ body {
 }
 
 /* ====== INICIAR BUTTON ====== */
-.iniciar-btn {
+.screen1-iniciar-btn {
     position: relative;
     z-index: 16;
-    background-color: #d9a48b;
-    color: #1a1a1a;
+    background-color: var(--color-primary);
+    color: var(--color-text);
     border: none;
     padding: 1rem 2.8rem;
-    font-size: 1rem;
-    font-weight: 600;
-    border-radius: 1.2rem;
+    font-size: var(--font-size-base);
+    font-weight: var(--font-weight-regular);
+    border-radius: var(--radius-md);
     cursor: pointer;
     display: inline-flex;
     align-items: center;
@@ -165,27 +142,27 @@ body {
     box-shadow: 0 4px 16px rgba(217, 164, 139, 0.35);
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     letter-spacing: 0.3px;
-    font-family: inherit;
+    font-family: var(--font-family);
     white-space: nowrap;
 }
 
-.iniciar-btn:hover {
-    background-color: #d19478;
+.screen1-iniciar-btn:hover {
+    background-color: var(--color-primary-dark);
     box-shadow: 0 8px 24px rgba(217, 164, 139, 0.45);
     transform: translateY(-3px);
 }
 
-.iniciar-btn:active {
+.screen1-iniciar-btn:active {
     transform: translateY(-1px);
     box-shadow: 0 2px 8px rgba(217, 164, 139, 0.3);
 }
 
-.btn-text {
+.screen1-btn-text {
     display: inline;
     text-transform: capitalize;
 }
 
-.btn-arrow {
+.screen1-btn-arrow {
     display: inline-block;
     font-weight: bold;
     font-size: 1.1rem;
@@ -193,21 +170,21 @@ body {
 
 /* ====== TABLET ADJUSTMENTS (481px+) ====== */
 @media (min-width: 481px) {
-    .title-text {
+    .screen1-title-text {
         font-size: 2.8rem;
     }
 
-    .hexagon-shape {
+    .screen1-hexagon-shape {
         width: 115px;
         height: 125px;
     }
 
-    .map-wrapper {
+    .screen1-map-wrapper {
         width: 220px;
         height: 220px;
     }
 
-    .university-wrapper {
+    .screen1-university-wrapper {
         width: 330px;
         height: 310px;
         right: -30px;
@@ -216,27 +193,27 @@ body {
 
 /* ====== DESKTOP ADJUSTMENTS (769px+) ====== */
 @media (min-width: 769px) {
-    .title-text {
+    .screen1-title-text {
         font-size: 3.2rem;
     }
 
-    .hexagon-shape {
+    .screen1-hexagon-shape {
         width: 120px;
         height: 130px;
     }
 
-    .map-wrapper {
+    .screen1-map-wrapper {
         width: 240px;
         height: 240px;
     }
 
-    .university-wrapper {
+    .screen1-university-wrapper {
         width: 360px;
         height: 340px;
         right: -40px;
     }
 
-    .iniciar-btn {
+    .screen1-iniciar-btn {
         padding: 1.1rem 3rem;
         font-size: 1.05rem;
     }
@@ -244,45 +221,45 @@ body {
 
 /* ====== LANDSCAPE ORIENTATION ====== */
 @media (orientation: landscape) {
-    .app-screen {
+    .screen1-container {
         height: auto;
         min-height: 100vh;
     }
 
-    .title-text {
+    .screen1-title-text {
         font-size: 2rem;
         top: 1rem;
     }
 
-    .title-wrapper {
+    .screen1-title-wrapper {
         top: 2rem;
     }
 
-    .hexagon-shape {
+    .screen1-hexagon-shape {
         width: 80px;
         height: 90px;
     }
 
-    .map-wrapper {
+    .screen1-map-wrapper {
         width: 150px;
         height: 150px;
         top: 0;
         right: 0;
     }
 
-    .university-wrapper {
+    .screen1-university-wrapper {
         width: 280px;
         height: 260px;
         top: 20%;
         right: -20px;
     }
 
-    .gray-section {
+    .screen1-gray-section {
         height: 35%;
         padding-bottom: 2rem;
     }
 
-    .iniciar-btn {
+    .screen1-iniciar-btn {
         padding: 0.8rem 2.2rem;
         font-size: 0.95rem;
     }
@@ -290,17 +267,17 @@ body {
 
 /* ====== SMALL MOBILE PHONES (<360px) ====== */
 @media (max-width: 359px) {
-    .title-text {
+    .screen1-title-text {
         font-size: 2.2rem;
         top: 8.5rem;
     }
 
-    .hexagon-shape {
+    .screen1-hexagon-shape {
         width: 95px;
         height: 105px;
     }
 
-    .map-wrapper {
+    .screen1-map-wrapper {
         width: 160px;
         height: 160px;
         top: 0;
@@ -308,30 +285,26 @@ body {
         padding: 0.5rem;
     }
 
-    .university-wrapper {
+    .screen1-university-wrapper {
         width: 260px;
         height: 240px;
         top: 25%;
         right: -15px;
     }
 
-    .iniciar-btn {
+    .screen1-iniciar-btn {
         padding: 0.85rem 2.2rem;
         font-size: 0.95rem;
     }
 
-    .gray-section {
+    .screen1-gray-section {
         padding-bottom: 2rem;
     }
 }
 
 /* ====== PRINT STYLES ====== */
 @media print {
-    body {
-        background-color: white;
-    }
-
-    .app-screen {
+    .screen1-container {
         box-shadow: none;
     }
 }

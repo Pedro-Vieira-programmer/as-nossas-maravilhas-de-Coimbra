@@ -26,11 +26,13 @@ Contém todos os componentes reutilizáveis e design tokens (variáveis CSS).
 - `.route-divider` - Divisor entre items
 - `.footer-title` - Título do rodapé
 
-### 2. **screen2.css** - Estilos Específicos do Screen 2
-Customizações e overrides específicos para o Screen 2.
+### 2. **screenX.css** - Estilos Específicos de Cada Screen
+Customizações e overrides específicos para cada screen.
 
-### 3. **screenX.css** - Padrão para Novos Screens
-Criar um novo arquivo para cada screen seguindo o padrão `screenX.css`.
+**Exemplos implementados:**
+- **style.css** - Estilos específicos do Screen 1
+- **screen2.css** - Estilos específicos do Screen 2  
+- **screen3.css** - Estilos específicos do Screen 3
 
 ## Design Tokens (CSS Variables)
 
@@ -91,16 +93,14 @@ Criar um novo arquivo para cada screen seguindo o padrão `screenX.css`.
 
 Cada breakpoint ajusta automaticamente as variáveis CSS e componentes.
 
-## Como Usar para Novos Screens
+## Padrão de Implementação
 
-O projeto segue um padrão modular onde cada screen tem:
+Cada screen segue a mesma estrutura modular:
 - **screenX.html** - Estrutura HTML específica do screen
-- **screenX.css** - Estilos específicos (opcional, reutiliza components.css)
-- **components.css** - Todos os componentes reutilizáveis
+- **screenX.css** - Estilos específicos (reutiliza components.css)
+- **components.css** - Design system compartilhado (obrigatório)
 
-### Padrão de Implementação
-
-Cada screen reutiliza a estrutura base:
+### Exemplo de Estrutura HTML
 
 ```html
 <!DOCTYPE html>
@@ -108,19 +108,21 @@ Cada screen reutiliza a estrutura base:
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>[TÍTULO]</title>
+    <!-- IMPORTANTE: Sempre incluir components.css ANTES de screenX.css -->
     <link rel="stylesheet" href="components.css">
-    <link rel="stylesheet" href="screenX.css">  <!-- Específico do screen -->
+    <link rel="stylesheet" href="screenX.css">
 </head>
 <body>
     <div class="route-container">
         <!-- Header (pode ter imagem ou texto) -->
-        <header class="app-header">
-            <!-- Conteúdo específico -->
+        <header class="app-header app-header--with-image">
+            <img src="./Screens/screenX/image.png" alt="..." class="app-header__title-image">
         </header>
 
-        <!-- Conteúdo principal -->
+        <!-- Conteúdo principal (scrollável se necessário) -->
         <main class="app-content app-content--scrollable">
-            <!-- Usar componentes de components.css -->
+            <!-- Componentes específicos do screen -->
         </main>
 
         <!-- Rodapé -->
@@ -137,42 +139,52 @@ Cada screen reutiliza a estrutura base:
 </html>
 ```
 
-### 1. Criar o HTML (screenX.html)
+## Exemplos de Screens Implementados
 
-Usar a estrutura acima, adaptando conteúdo específico do screen.
+### Screen 1 - Tela Inicial
+**Ficheiros:** `index.html`, `style.css`
 
-### 2. Criar screenX.css (Opcional)
+Estrutura única com layout absoluto para apresentação visual personalizada.
+- Usa: `components.css` para variáveis CSS + `style.css` para estilos específicos
+- Classes: `.screen1-container`, `.screen1-title-text`, `.screen1-iniciar-btn`, etc.
 
-Se precisares de estilos específicos para o screen:
-
-```css
-/* ============================================
-   SCREEN X - DESCRIÇÃO
-   ============================================ */
-
-/* Overrides específicos para este screen */
-.seu-componente {
-    /* estilos */
-}
-
-/* Responsive overrides */
-@media (max-width: 479px) {
-    .seu-componente {
-        /* mobile */
-    }
-}
+```html
+<main class="screen1-container">
+    <!-- Elementos específicos de Screen 1 -->
+</main>
 ```
 
-### 3. Reutilizar Componentes
+### Screen 2 - A Nossa Rota
+**Ficheiros:** `screen2.html`, `screen2.css`
 
-Todos os componentes em `components.css` estão disponíveis:
-- `.app-header` e `.app-header--with-image`
-- `.app-content` e `.app-content--scrollable`
-- `.app-footer` e `.app-footer--accent`
-- `.route-card`, `.route-card__image`, `.route-card__label`
-- `.route-divider`
-- `.btn--primary`, `.btn--secondary`, `.btn--secondary-non`
-- `.button-group`
+Rota linear com 11 pontos turísticos em sequência vertical.
+- Usa: `components.css` (componentes) + `screen2.css` (customizações)
+- Estrutura: `.route-container` → `.app-header` → `.app-content--scrollable` → `.app-footer`
+
+```html
+<div class="route-container">
+    <header class="app-header app-header--with-image">
+        <img src="./Screens/screen2/A nossa rota.png" alt="A nossa rota" class="app-header__title-image">
+    </header>
+    
+    <main class="app-content app-content--scrollable">
+        <div class="route-list">
+            <!-- Cards de rota -->
+        </div>
+    </main>
+    
+    <footer class="app-footer app-footer--accent">
+        <!-- Botões -->
+    </footer>
+</div>
+```
+
+### Screen 3 - Guia de Direções
+**Ficheiros:** `screen3.html`, `screen3.css`
+
+Guia com direções e mapa para um ponto turístico.
+- Usa: `components.css` (base) + `screen3.css` (customizações)
+- Estrutura: `.route-container` com conteúdo scrollável
 
 ## BEM Naming Convention
 
@@ -193,6 +205,13 @@ Exemplos:
 .route-card--active  // Modifier
 ```
 
+**Para screens únicos (Screen 1, 3, etc.):**
+```
+.screen1-container      // Block específico de Screen 1
+.screen1-title-text     // Elemento específico
+.screen1-iniciar-btn    // Botão específico
+```
+
 ## Exemplo de Card de Rota (Screen 2)
 
 ### Estrutura Implementada
@@ -211,64 +230,26 @@ O Screen 2 implementa uma rota linear com 11 pontos turísticos em sequência ve
 </div>
 ```
 
-### Screen 2 - Estrutura Completa
-```html
-<!DOCTYPE html>
-<html lang="pt-PT">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <meta name="description" content="A Nossa Rota - As Nossas Maravilhas de Coimbra">
-    <title>A Nossa Rota - As Nossas Maravilhas de Coimbra</title>
-    <link rel="stylesheet" href="components.css">
-    <link rel="stylesheet" href="screen2.css">
-</head>
-<body>
-    <div class="route-container">
-        <!-- Header com imagem de título -->
-        <header class="app-header app-header--with-image">
-            <img src="./Screens/screen2/A nossa rota.png" alt="A nossa rota" class="app-header__title-image">
-        </header>
+## Como Usar CSS Variables
 
-        <!-- Conteúdo rolável -->
-        <main class="app-content app-content--scrollable">
-            <div class="route-list">
-                <!-- Repetir para cada ponto da rota -->
-                <article class="route-card">
-                    <img src="./Screens/screen2/Rectangle X.png" alt="Local" class="route-card__image">
-                    <h2 class="route-card__label">Nome do Local</h2>
-                </article>
-                <div class="route-divider">
-                    <img src="./Screens/screen2/Arrow X.png" alt="" class="route-divider__icon">
-                </div>
-            </div>
-        </main>
-
-        <!-- Rodapé com botões -->
-        <footer class="app-footer app-footer--accent">
-            <div class="footer-content">
-                <div class="button-group">
-                    <div class="btn btn--secondary-non">FIM</div>
-                    <button class="btn btn--primary" onclick="handleIniciarClick()">Deseja iniciar?</button>
-                </div>
-            </div>
-        </footer>
-    </div>
-</body>
-</html>
+### Bom ✅
+```css
+.meu-elemento {
+    background-color: var(--color-primary);
+    color: var(--color-text);
+    padding: var(--spacing-lg);
+    border-radius: var(--radius-md);
+}
 ```
 
-## Modificadores de Título
-
-```html
-<!-- Título com underline -->
-<h1 class="app-title app-title--underline">A nossa rota</h1>
-
-<!-- Título simples -->
-<h1 class="app-title">Título Simples</h1>
-
-<!-- Título no footer -->
-<h3 class="footer-title footer-title--underline">FIM</h3>
+### Evitar ❌
+```css
+.meu-elemento {
+    background-color: #d9a48b;
+    color: #1a1a1a;
+    padding: 1.5rem;
+    border-radius: 0.9rem;
+}
 ```
 
 ## Modificadores de Botão
@@ -277,8 +258,11 @@ O Screen 2 implementa uma rota linear com 11 pontos turísticos em sequência ve
 <!-- Botão Primário (Preto) -->
 <button class="btn btn--primary">Deseja iniciar?</button>
 
-<!-- Botão Secundário (Bege) -->
+<!-- Botão Secundário (Bege com borda) -->
 <button class="btn btn--secondary">FIM</button>
+
+<!-- Botão Secundário Sem Borda -->
+<div class="btn btn--secondary-non">FIM</div>
 
 <!-- Grupo de Botões -->
 <div class="button-group">
@@ -296,9 +280,9 @@ O Screen 2 implementa uma rota linear com 11 pontos turísticos em sequência ve
 ## Scrollbar Customizado
 
 O scrollbar é automaticamente estilizado em áreas com `.app-content--scrollable`:
-- Track: Cinzento claro (#f0f0f0)
-- Thumb: Bege (#d9a48b)
-- Hover: Bege escuro (#d19478)
+- **Track**: Cinzento claro (#f0f0f0)
+- **Thumb**: Bege (#d9a48b)
+- **Hover**: Bege escuro (#d19478)
 
 ## Cores Exatas
 
@@ -318,9 +302,11 @@ Mantidas do design original:
 ## Checklist para Novo Screen
 
 - [ ] Criar arquivo `screenX.html`
-- [ ] Adicionar links para `components.css` e `screenX.css`
+- [ ] Adicionar links para `components.css` e `screenX.css` (nesta ordem!)
 - [ ] Usar classes de componentes existentes
 - [ ] Manter estrutura HTML semântica
+- [ ] Usar CSS Variables em vez de valores hardcoded
+- [ ] Prefixar classes específicas com `screenX-`
 - [ ] Testar em mobile, tablet e desktop
 - [ ] Testar em landscape e portrait
 - [ ] Validar acessibilidade
@@ -337,5 +323,5 @@ Mantidas do design original:
 
 Desenvolvido para: As Nossas Maravilhas de Coimbra
 Última atualização: 2026-05-17
-**Status**: ✅ Documentado com exemplos reais (Screen 1 + Screen 2)
-**Padrão**: Modular - cada screen reutiliza components.css com CSS específico opcional
+**Status**: ✅ Documentado com exemplos reais (Screen 1, Screen 2 + Screen 3)
+**Padrão**: Modular - components.css + screenX.css (padrão único para todos os 24 screens)

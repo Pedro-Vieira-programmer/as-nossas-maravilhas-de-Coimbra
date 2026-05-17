@@ -74,11 +74,13 @@ Pronto! Aceda a: https://pedro-vieira-programmer.github.io/as-nossas-maravilhas-
 2. Inicie servidor local
 3. Aceda a `http://localhost:8000`
 4. **Teste os screens disponíveis:**
-   - `http://localhost:8000/index.html` - Screen 1
-   - `http://localhost:8000/screen2.html` - Screen 2 (Rota)
-5. Leia [SCREEN2_IMPLEMENTATION.md](./SCREEN2_IMPLEMENTATION.md) para entender o padrão implementado
+   - `http://localhost:8000/index.html` - Screen 1 (Tela Inicial)
+   - `http://localhost:8000/screen2.html` - Screen 2 (A Nossa Rota)
+   - `http://localhost:8000/screen3.html` - Screen 3 (Guia de Direções)
+5. Leia [ARCHITECTURE.md](./ARCHITECTURE.md) para entender a estrutura modular
 6. Leia [DESIGN_SYSTEM.md](./DESIGN_SYSTEM.md) para documentação do sistema de componentes
-7. Consulte [.github/CONTRIBUTING.md](./.github/CONTRIBUTING.md) para contribuir
+7. Leia [SCREEN_TEMPLATES.md](./SCREEN_TEMPLATES.md) para o template de novo screen
+8. Consulte [.github/CONTRIBUTING.md](./.github/CONTRIBUTING.md) para contribuir
 
 ---
 
