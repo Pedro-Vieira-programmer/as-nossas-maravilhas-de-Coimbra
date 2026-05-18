@@ -2,29 +2,96 @@
 <html lang="pt-PT">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fim - As nossas maravilhas de Coimbra</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="description" content="Fim da Viagem - As Nossas Maravilhas de Coimbra">
+    <meta name="theme-color" content="#ffffff">
+    <title>Fim da Viagem - As Nossas Maravilhas de Coimbra</title>
     <link rel="stylesheet" href="components.css">
     <link rel="stylesheet" href="screen24.css">
     <link rel="icon" type="image/png" href="icon.png">
 </head>
 <body>
     <div class="route-container">
-        <!-- Header with image -->
-        <header class="app-header app-header--with-image">
-            <img src="Screens/screen24/Fim.png" alt="Fim" class="app-header__title-image">
+        <!-- Header - Simple Minimal -->
+        <header class="app-header app-header--completion">
+            <h1 class="app-title screen24-header-title">FIM</h1>
         </header>
 
-        <!-- Main Content -->
+        <!-- Main Content - Completion Message -->
         <main class="app-content app-content--scrollable">
-            <!-- White Card Container -->
-            <div class="screen24-card">
-                <!-- Main Title -->
-                <div class="screen24-title">
-                    <img src="Screens/screen24/Chegou ao fim da sua viagem!.png" alt="Chegou ao fim da sua viagem!">
+            <!-- Completion Card -->
+            <div class="screen24-completion-card">
+                <!-- Celebration Icon Area -->
+                <div class="screen24-celebration">
+                    <div class="screen24-celebration-circle">
+                        <span class="screen24-celebration-icon">✓</span>
+                    </div>
+                </div>
+
+                <!-- Main Message -->
+                <h2 class="screen24-completion-title">
+                    Chegou ao fim da sua viagem!
+                </h2>
+
+                <!-- Subtitle -->
+                <p class="screen24-completion-subtitle">
+                    Obrigado por explorar as maravilhas de Coimbra connosco!
+                </p>
+
+                <!-- Descriptive Content -->
+                <div class="screen24-completion-content">
+                    <p class="screen24-completion-text">
+                        Esperamos que tenha apreciado esta experiência e descoberto novos lugares e histórias fascinantes sobre a cidade universitária de Coimbra. 
+                    </p>
+                    <p class="screen24-completion-text">
+                        A sua jornada através de 10 pontos turísticos icónicos permitiu-lhe compreender melhor o Património, a Cultura e a História que tornam Coimbra um destino único e especial.
+                    </p>
+                </div>
+
+                <!-- Statistics/Summary -->
+                <div class="screen24-completion-stats">
+                    <div class="screen24-stat-item">
+                        <span class="screen24-stat-number">10 (ou mais)</span>
+                        <span class="screen24-stat-label">Locais Visitados</span>
+                    </div>
+                    <div class="screen24-stat-item">
+                        <span class="screen24-stat-number">∞</span>
+                        <span class="screen24-stat-label">Conhecimentos adquiridos</span>
+                    </div>
+                </div>
+
+                <!-- Call to Action -->
+                <div class="screen24-cta-text">
+                    <p>Volte a visitar-nos em breve!</p>
                 </div>
             </div>
         </main>
+
+        <!-- Footer - Navigation -->
+        <footer class="app-footer app-footer--completion">
+            <div class="footer-content">
+                <div class="button-group button-group--horizontal">
+                    <a href="screen23.html">
+                        <button class="btn btn--secondary" onclick="handleVoltarClick()">Voltar</button>
+                    </a>
+                    <a href="index.html">
+                        <button class="btn btn--primary" onclick="handleReiniciarClick()">Recomeçar</button>
+                    </a>
+                </div>
+            </div>
+        </footer>
     </div>
+
+    <script>
+        function handleVoltarClick() {
+            console.log('Voltar clicado');
+            // Navigate to previous screen
+        }
+
+        function handleReiniciarClick() {
+            console.log('Recomeçar clicado');
+            // Navigate to home screen
+        }
+    </script>
 </body>
 </html>
