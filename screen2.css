@@ -34,6 +34,17 @@ body {
     margin-bottom: var(--spacing-xs);
 }
 
+.route-card__image,
+.route-card__label {
+    cursor: pointer;
+    transition: opacity 0.2s ease;
+}
+
+.route-card__image:active,
+.route-card__label:active {
+    opacity: 0.8;
+}
+
 .app-footer {
     /* Uses accent color from components.css */
 }
@@ -56,11 +67,17 @@ body {
 
 /* Desktop optimizations for Screen 2 */
 @media (min-width: 769px) {
-    .route-card {
-        transition: transform 0.2s ease;
+    .route-card__image,
+    .route-card__label {
+        transition: transform 0.2s ease, opacity 0.2s ease;
     }
     
-    .route-card:hover .route-card__image {
+    .route-card__image:hover,
+    .route-card__label:hover {
+        transform: scale(1.02);
+    }
+    
+    .route-card__image:hover {
         box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
     }
 }
