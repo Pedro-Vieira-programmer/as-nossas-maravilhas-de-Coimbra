@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="description" content="Guia - Sé Velha de Coimbra - As Nossas Maravilhas de Coimbra">
+    <meta name="theme-color" content="#ffffff">
+    <title>Guia - Sé Velha de Coimbra - As Nossas Maravilhas de Coimbra</title>
+    <link rel="stylesheet" href="components.css">
+    <link rel="stylesheet" href="info.css">
+    <link rel="icon" type="image/png" href="icon.png">
+</head>
+<body>
+    <div class="route-container">
+        <!-- Header with "Guia" title image -->
+        <header class="app-header app-header--guide">
+            <div class="header-background">
+                <img src="./Screens/screen16/Rectangle 2.png" alt="" class="header-bg-image">
+            </div>
+            <img src="./Screens/screen16/Guia.png" alt="Guia" class="app-header__title-image">
+        </header>
+
+        <!-- Main Content -->
+        <main class="app-content app-content--scrollable">
+            <div class="guide-content">
+                <!-- Main Title Card -->
+                <article class="content-card content-card--title">
+                    <h1 class="guide-title">Sé Velha de Coimbra (e fado da cidade)</h1>
+                    
+                    <!-- Subtitle and Play Button -->
+                    <div class="guide-intro">
+                        <div class="intro-text">
+                            <h2 class="guide-subtitle">Catedral histórica de Coimbra</h2>
+                        </div>
+                        <button class="play-button" aria-label="Play audio guide">
+                            <img src="./Screens/screen4/icons8-audio-wave-24 1.png" alt="" class="audio-icon">
+                        </button>
+                    </div>
+
+                    <!-- Description Text -->
+                    <p class="guide-description">
+                        A Sé Velha de Coimbra é um dos monumentos mais emblemáticos da cidade e um símbolo marcante do património histórico português. Construída no século XII, durante o reinado de D. Afonso Henriques, constitui um dos mais bem preservados exemplares da arquitetura românica em Portugal. A sua aparência sólida e austera, com paredes altas e poucas janelas, revela o carácter defensivo típico da época em que foi erguida.
+                    </p>
+                    <p class="guide-description">
+                        O interior do templo, igualmente sóbrio e imponente, acolhe um dos claustros mais antigos do país, cuja construção remonta ao século XIII. Ao longo dos séculos, a Sé Velha não foi apenas um espaço de culto religioso, mas também um ponto de encontro da comunidade estudantil e um palco privilegiado da vida cultural de Coimbra.
+                    </p>
+                </article>
+
+                <!-- Origin Section -->
+                <article class="content-card content-card--section">
+                    <h2 class="section-title">O fado de Coimbra</h2>
+                    <p class="section-text">
+                        Entre as tradições que mais se destacam no contexto académico encontra-se o Fado de Coimbra. Diferente do fado lisboeta, o Fado de Coimbra está profundamente ligado à Universidade e é interpretado por estudantes e antigos estudantes trajados com a tradicional capa e batina. De tom mais introspectivo, melancólico e poético, pretende transmitir as emoções associadas à vida académica, à saudade e às vivências da cidade.
+                    </p>
+                    <p class="section-text">
+                        A ligação entre a Sé Velha e o Fado de Coimbra é particularmente forte. O adro da Sé Velha tornou-se um dos cenários mais simbólicos desta tradição, servindo de palco para serenatas memoráveis, despedidas académicas e outros momentos de grande significado. A acústica natural do espaço, aliada à imponência arquitetónica do monumento, proporciona às atuações uma atmosfera única, carregada de solenidade e emoção.
+                    </p>
+                    <p class="section-text">
+                        No universo do Fado de Coimbra, vários intérpretes dedicaram a sua vida a preservar e divulgar esta tradição tão especial. Entre eles destaca-se José Manuel dos Santos, reconhecido fadista coimbrão. Amplamente apreciado pela comunidade académica e pelos amantes da música tradicional da cidade, é conhecido pela sua interpretação sentida, pelo respeito profundo pelas raízes do Fado de Coimbra e pelo contributo constante para a sua valorização.
+                    </p>
+                    <p class="section-text">
+                        Participando em serenatas, eventos culturais e iniciativas relacionadas com a vida estudantil, José Manuel dos Santos tornou-se uma figura central na preservação desta herança musical. O seu percurso enquanto fadista reforça a importância de manter viva a ligação entre as tradições académicas, a música e os espaços históricos da cidade.
+                    </p>
+                    <p class="section-text">
+                        A Sé Velha de Coimbra e o Fado de Coimbra representam, em conjunto, dois pilares essenciais da identidade cultural da cidade: o seu património histórico e a sua tradição académica. Através de intérpretes como José Manuel dos Santos, esta ligação secular continua a ser celebrada, garantindo que Coimbra permaneça um lugar único no panorama cultural português.
+                    </p>
+                </article>
+
+                <!-- School Image -->
+                <figure class="school-figure">
+                    <img src="./Screens/screen16/martim-de-freitas1-493 1.png" alt="Sé Velha de Coimbra" class="school-image">
+                </figure>
+            </div>
+        </main>
+
+        <!-- Footer with Navigation Buttons -->
+        <footer class="app-footer app-footer--accent">
+            <div class="footer-content">
+                <div class="button-group button-group--horizontal">
+                    <a href="screen15.html">
+                        <button class="btn btn--secondary" onclick="handleVoltarClick()">Voltar</button>
+                    </a>
+                    <a href="screen17.html">
+                        <button class="btn btn--primary" onclick="handleSeguirClick()">Seguir</button>
+                    </a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        function handleVoltarClick() {
+            console.log('Voltar clicado');
+            // Future navigation logic
+        }
+
+        function handleSeguirClick() {
+            console.log('Seguir clicado');
+            // Future navigation logic
+        }
+    </script>
+</body>
+</html>

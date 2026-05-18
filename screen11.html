@@ -45,14 +45,31 @@
             </div>
         </main>
 
-        <!-- Footer with Button -->
-        <footer class="app-footer">
-            <a href="screen12.html">
-                <button class="directionsscreen-button">
-                    <img src="Screens/screen11/Group 2.png" alt="Cheguei!">
-                </button>
-            </a>
+                <!-- Footer with Navigation Buttons -->
+        <footer class="app-footer app-footer--accent">
+            <div class="footer-content">
+                <div class="button-group button-group--horizontal">
+                    <a href="screen10.html">
+                        <button class="btn btn--secondary" onclick="handleVoltarClick()">Voltar</button>
+                    </a>
+                    <a href="screen12.html">
+                        <button class="btn btn--primary" onclick="handleSeguirClick()">Seguir</button>
+                    </a>
+                </div>
+            </div>
         </footer>
     </div>
+
+    <script>
+        function handleVoltarClick() {
+            console.log('Voltar clicado');
+            // Future navigation logic
+        }
+
+        function handleSeguirClick() {
+            console.log('Seguir clicado');
+            // Future navigation logic
+        }
+    </script>
 </body>
 </html>

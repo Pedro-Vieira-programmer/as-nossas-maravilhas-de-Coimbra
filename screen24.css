@@ -1,0 +1,111 @@
+/* Screen 24 - Fim da Viagem */
+
+/* Page Background */
+.route-container {
+    background-color: #f0f0f0;
+}
+
+/* Header Styling */
+.app-header {
+    background-color: var(--color-primary);
+    border-radius: 0 0 var(--radius-lg) var(--radius-lg);
+    border-bottom: none;
+}
+
+/* Main Content Area */
+.app-content {
+    background-color: #f0f0f0;
+    padding: var(--spacing-xl);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-grow: 1;
+}
+
+/* Card Container */
+.screen24-card {
+    background-color: var(--color-neutral);
+    border-radius: var(--radius-lg);
+    padding: var(--spacing-xl);
+    max-width: 100%;
+    width: 100%;
+    box-shadow: var(--shadow-md);
+}
+
+/* Title Section */
+.screen24-title {
+    margin-bottom: var(--spacing-lg);
+    text-align: center;
+}
+
+.screen24-title img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Text Section */
+.screen24-text {
+    text-align: center;
+}
+
+.screen24-text img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Responsive Design */
+@media (max-width: 479px) {
+    /* Mobile */
+    .app-content {
+        padding: var(--spacing-md);
+    }
+
+    .screen24-card {
+        padding: var(--spacing-lg);
+    }
+
+    .screen24-title {
+        margin-bottom: var(--spacing-md);
+    }
+}
+
+@media (min-width: 480px) and (max-width: 768px) {
+    /* Tablet */
+    .app-content {
+        padding: var(--spacing-lg);
+    }
+
+    .screen24-card {
+        max-width: 90%;
+        padding: var(--spacing-xl);
+    }
+}
+
+@media (min-width: 769px) {
+    /* Desktop */
+    .app-content {
+        padding: var(--spacing-xl);
+    }
+
+    .screen24-card {
+        max-width: 80%;
+        padding: var(--spacing-xl);
+    }
+}
+
+@media (orientation: landscape) {
+    /* Landscape */
+    .app-content {
+        padding: var(--spacing-md);
+    }
+
+    .screen24-card {
+        padding: var(--spacing-lg);
+    }
+
+    .screen24-title {
+        margin-bottom: var(--spacing-md);
+    }
+}
