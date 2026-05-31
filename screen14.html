@@ -31,8 +31,9 @@
                         <div class="intro-text">
                             <h2 class="guide-subtitle">Zona comercial e histórica no centro de Coimbra</h2>
                         </div>
-                        <button class="play-button" aria-label="Play audio guide">
+                        <button class="play-button" aria-label="Play audio guide" data-state="idle">
                             <img src="./Screens/screen4/icons8-audio-wave-24 1.png" alt="" class="audio-icon">
+                            <span class="play-button__indicator"></span>
                         </button>
                     </div>
 
@@ -102,6 +103,36 @@
         function handleSeguirClick() {
             console.log('Seguir clicado');
             // Future navigation logic
+        }
+
+        // Audio playback manager
+        let currentAudio = null;
+
+        const playButton = document.querySelector('.play-button');
+        if (playButton) {
+            playButton.addEventListener('click', function() {
+                const state = playButton.getAttribute('data-state');
+
+                if (state === 'idle' || state === 'paused') {
+                    // Start or resume audio
+                    if (!currentAudio) {
+                        currentAudio = new Audio('./Audios/Baixa.mp3');
+                        
+                        currentAudio.addEventListener('ended', function() {
+                            playButton.setAttribute('data-state', 'idle');
+                        });
+                    }
+                    
+                    currentAudio.play().catch(error => console.error('Erro ao reproduzir áudio:', error));
+                    playButton.setAttribute('data-state', 'playing');
+                } else if (state === 'playing') {
+                    // Pause audio
+                    if (currentAudio) {
+                        currentAudio.pause();
+                        playButton.setAttribute('data-state', 'paused');
+                    }
+                }
+            });
         }
     </script>
 </body>

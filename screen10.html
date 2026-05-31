@@ -32,8 +32,9 @@
                         <div class="intro-text">
                             <h2 class="guide-subtitle">Parque urbano junto ao Mondego em Coimbra</h2>
                         </div>
-                        <button class="play-button" aria-label="Play audio guide">
+                        <button class="play-button" aria-label="Play audio guide" data-state="idle">
                             <img src="./Screens/screen4/icons8-audio-wave-24 1.png" alt="" class="audio-icon">
+                            <span class="play-button__indicator"></span>
                         </button>
                     </div>
 
@@ -49,9 +50,6 @@
                     </p>
                     <p class="guide-description">
                         A requalificação era urgente, pois o parque apresentava sinais de desgaste: muros danificados, drenagem deficiente, mobiliário envelhecido, iluminação pobre, etc.
-                    </p>
-                    <p class="guide-description">
-                        O Parque da Cidade é definitivamente uma paragem necessária para todos os habitantes de Coimbra e para os turistas que se deparam com a nossa bonita cidade, pela sua magnitude e pela sua magnificência.
                     </p>
                 </article>
 
@@ -74,12 +72,6 @@
                         </li>
                         <li class="bullet-item">
                             É possível ter uma vista muito bonita da margem oposta do Mondego, incluindo a encosta de Santa Clara.
-                        </li>
-                        <li class="bullet-item">
-                            No parque há estátuas e bustos, por exemplo, o busto dedicado a Manuel Braga;
-                        </li>
-                        <li class="bullet-item">
-                            No parque há estátuas e bustos, por exemplo, o busto dedicado a Manuel Braga;
                         </li>
                     </ul>
                 </article>
@@ -123,6 +115,36 @@
         function handleSeguirClick() {
             console.log('Seguir clicado');
             // Future navigation logic
+        }
+
+        // Audio playback manager
+        let currentAudio = null;
+
+        const playButton = document.querySelector('.play-button');
+        if (playButton) {
+            playButton.addEventListener('click', function() {
+                const state = playButton.getAttribute('data-state');
+
+                if (state === 'idle' || state === 'paused') {
+                    // Start or resume audio
+                    if (!currentAudio) {
+                        currentAudio = new Audio('./Audios/ParueManuelBraga.mp3');
+                        
+                        currentAudio.addEventListener('ended', function() {
+                            playButton.setAttribute('data-state', 'idle');
+                        });
+                    }
+                    
+                    currentAudio.play().catch(error => console.error('Erro ao reproduzir áudio:', error));
+                    playButton.setAttribute('data-state', 'playing');
+                } else if (state === 'playing') {
+                    // Pause audio
+                    if (currentAudio) {
+                        currentAudio.pause();
+                        playButton.setAttribute('data-state', 'paused');
+                    }
+                }
+            });
         }
     </script>
 </body>

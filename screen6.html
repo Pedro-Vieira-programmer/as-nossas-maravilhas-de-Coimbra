@@ -32,17 +32,23 @@
                         <div class="intro-text">
                             <h2 class="guide-subtitle">Uma vista que vale a pena apreciar</h2>
                         </div>
-                        <button class="play-button" aria-label="Play audio guide">
+                        <button class="play-button" aria-label="Play audio guide" data-state="idle">
                             <img src="./Screens/screen4/icons8-audio-wave-24 1.png" alt="" class="audio-icon">
+                            <span class="play-button__indicator"></span>
                         </button>
                     </div>
 
                     <!-- Description Text -->
                     <p class="guide-description">
-                        O Penedo da Saudade é um local de grande importância histórica e cultural em Coimbra, conhecido por ser um dos pontos de interesse mais visitados pelos turistas.
+                        O Penedo da Saudade é conhecido não só pela sua beleza romântica e académica, mas também por alguns aspetos caricatos que lhe dão um charme especial. Entre lendas, tradições estudantis e curiosidades históricas, este espaço em Coimbra mistura solenidade com episódios curiosos.
                     </p>
-                    <p class="guide-description">
-                        Em 2003, a escola assumiu um papel ainda mais central ao tornar-se sede do Agrupamento de Escolas Martim de Freitas, passando a coordenar várias escolas do 1.º ciclo e jardins de infância da zona. Hoje destaca-se pela diversidade cultural, pelo forte investimento na inclusão e por projetos afins.
+                </article>
+
+                <!-- Origin Section -->
+                <article class="content-card content-card--section">
+                    <h2 class="section-title">Nome curioso e múltiplas origens</h2>
+                    <p class="section-text">
+                        Inicialmente chamado Pedra dos Ventos, só mais tarde passou a ser conhecido como Penedo da Saudade. A mudança de nome está ligada à tradição romântica de D. Pedro e Inês de Castro, mas também ao hábito dos estudantes de Coimbra de ali deixarem poemas e recordações com o consentimento da Câmara Municipal.
                     </p>
                 </article>
 
@@ -85,6 +91,36 @@
         function handleSeguirClick() {
             console.log('Seguir clicado');
             // Future navigation logic
+        }
+
+        // Audio playback manager
+        let currentAudio = null;
+
+        const playButton = document.querySelector('.play-button');
+        if (playButton) {
+            playButton.addEventListener('click', function() {
+                const state = playButton.getAttribute('data-state');
+
+                if (state === 'idle' || state === 'paused') {
+                    // Start or resume audio
+                    if (!currentAudio) {
+                        currentAudio = new Audio('./Audios/Penedo-da-Saudade.mp3');
+                        
+                        currentAudio.addEventListener('ended', function() {
+                            playButton.setAttribute('data-state', 'idle');
+                        });
+                    }
+                    
+                    currentAudio.play().catch(error => console.error('Erro ao reproduzir áudio:', error));
+                    playButton.setAttribute('data-state', 'playing');
+                } else if (state === 'playing') {
+                    // Pause audio
+                    if (currentAudio) {
+                        currentAudio.pause();
+                        playButton.setAttribute('data-state', 'paused');
+                    }
+                }
+            });
         }
     </script>
 </body>
